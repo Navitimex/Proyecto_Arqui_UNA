@@ -4,31 +4,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Escuela de Informática - Universidad Nacional de Costa Rica</title>
-    <meta name="description" content="Portal oficial de la Escuela de Informática de la Universidad Nacional de Costa Rica. Carreras, posgrados, investigación y trámites estudiantiles.">
-    <!-- Google Fonts: Inter -->
+    <title>Escuela de Informática | Universidad Nacional de Costa Rica</title>
+    <meta name="description" content="Portal oficial de la Escuela de Informática de la Universidad Nacional de Costa Rica (UNA). Formación de excelencia en Ingeniería en Sistemas de Información, investigación y servicios tecnológicos.">
+    <!-- Google Fonts: Roboto e Inter (Tipografía Oficial UNA) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <!-- Estilos Modulares -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <!-- Hojas de Estilo Institucionales -->
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/home.css">
 </head>
 
 <body>
 
+    <!-- BARRA SUPERIOR INSTITUCIONAL (TOP BAR) -->
+    <div class="top-bar">
+        <div class="top-bar-container">
+            <div class="top-bar-left">
+                <span class="top-bar-univ">Universidad Nacional de Costa Rica</span>
+                <span class="top-bar-location">Campus Benjamín Núñez • Lagunilla, Heredia</span>
+            </div>
+            <div class="top-bar-right">
+                <a href="#">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                    Correo UNA
+                </a>
+                <a href="#">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                    Aula Virtual
+                </a>
+                <a href="#">Directorio Institucional</a>
+                <a href="#">Portal de Sistemas</a>
+            </div>
+        </div>
+    </div>
+
     <!-- HEADER / MENÚ PRINCIPAL -->
     <header role="banner">
         <div class="header-container">
-            <a href="index.html" class="logo" aria-label="Inicio Escuela de Informática UNA">
-                <span>UNA</span> ESCUELA
+            <a href="index.html" class="brand-logo" aria-label="Escuela de Informática - Universidad Nacional">
+                <div class="logo-badge" aria-hidden="true">
+                    UNA
+                    <span class="sub">CR</span>
+                </div>
+                <div class="brand-text">
+                    <span class="brand-title">ESCUELA DE INFORMÁTICA</span>
+                    <span class="brand-subtitle">Facultad de Ciencias Exactas y Naturales</span>
+                </div>
             </a>
             <nav aria-label="Navegación principal">
                 <ul>
-                    <li class="dropdown"><a href="#">La Escuela ▾</a>
+                    <li class="dropdown">
+                        <a href="#">
+                            La Escuela
+                            <svg class="chevron-icon" viewBox="0 0 24 24" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </a>
                         <ul class="dropdown-menu">
                             <li><a href="#">Acerca de la Escuela</a></li>
-                            <li class="dropdown dropdown-submenu has-submenu"><a href="#">Sedes</a>
+                            <li class="dropdown dropdown-submenu has-submenu">
+                                <a href="#">
+                                    Sedes Regionales
+                                    <span class="arrow-sub" aria-hidden="true">›</span>
+                                </a>
                                 <ul class="dropdown-menu">
                                     <li><a href="#" class="ext-link">Sede Regional Occidente ↗</a></li>
                                     <li><a href="#" class="ext-link">Campus Sarapiquí ↗</a></li>
@@ -38,13 +75,21 @@
                                     <li><a href="#" class="ext-link">Coto ↗</a></li>
                                 </ul>
                             </li>
-                            <li class="dropdown dropdown-submenu has-submenu"><a href="#">Acreditación y Calidad</a>
+                            <li class="dropdown dropdown-submenu has-submenu">
+                                <a href="#">
+                                    Acreditación y Calidad
+                                    <span class="arrow-sub" aria-hidden="true">›</span>
+                                </a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="#">Documentación Oficial</a></li>
-                                    <li><a href="#">Informes de Evaluación</a></li>
+                                    <li><a href="#">Documentación Oficial SINAES</a></li>
+                                    <li><a href="#">Informes de Autoevaluación</a></li>
                                 </ul>
                             </li>
-                            <li class="dropdown dropdown-submenu has-submenu"><a href="#">Directorio Institucional</a>
+                            <li class="dropdown dropdown-submenu has-submenu">
+                                <a href="#">
+                                    Directorio Institucional
+                                    <span class="arrow-sub" aria-hidden="true">›</span>
+                                </a>
                                 <ul class="dropdown-menu">
                                     <li><a href="#" class="ext-link">Académicos y Administrativos ↗</a></li>
                                     <li><a href="#" class="ext-link">Consultar Investigadores ↗</a></li>
@@ -54,140 +99,219 @@
                         </ul>
                     </li>
 
-                    <li class="dropdown"><a href="#">Oferta Académica ▾</a>
+                    <li class="dropdown">
+                        <a href="#">
+                            Oferta Académica
+                            <svg class="chevron-icon" viewBox="0 0 24 24" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </a>
                         <ul class="dropdown-menu">
-                            <li><a href="#">Diplomado</a></li>
-                            <li><a href="#">Bachillerato</a></li>
-                            <li><a href="#">Licenciatura</a></li>
-                            <li class="dropdown dropdown-submenu has-submenu"><a href="#">Posgrados</a>
+                            <li><a href="#">Diplomado en Sistemas de Información</a></li>
+                            <li><a href="#">Bachillerato en Ingeniería en Sistemas</a></li>
+                            <li><a href="#">Licenciatura en Ingeniería en Sistemas</a></li>
+                            <li class="dropdown dropdown-submenu has-submenu">
+                                <a href="#">
+                                    Posgrados y Maestrías
+                                    <span class="arrow-sub" aria-hidden="true">›</span>
+                                </a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="#" class="ext-link">MATI ↗</a></li>
-                                    <li><a href="#" class="ext-link">MATIE ↗</a></li>
-                                    <li><a href="#" class="ext-link">MAGIT ↗</a></li>
+                                    <li><a href="#" class="ext-link">MATI - Aplicaciones TI ↗</a></li>
+                                    <li><a href="#" class="ext-link">MATIE - Tecnología e Innovación Educativa ↗</a></li>
+                                    <li><a href="#" class="ext-link">MAGIT - Gestión de Innovación Tecnológica ↗</a></li>
                                 </ul>
                             </li>
                         </ul>
                     </li>
 
-                    <li class="dropdown"><a href="#">Investigación y Extensión ▾</a>
+                    <li class="dropdown">
+                        <a href="#">
+                            Investigación y Extensión
+                            <svg class="chevron-icon" viewBox="0 0 24 24" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </a>
                         <ul class="dropdown-menu">
-                            <li><a href="#">Líneas de Investigación</a></li>
-                            <li class="dropdown dropdown-submenu has-submenu"><a href="#">Proyectos y Actividades</a>
+                            <li><a href="#">Líneas de Investigación Oficiales</a></li>
+                            <li class="dropdown dropdown-submenu has-submenu">
+                                <a href="#">
+                                    Proyectos y Actividades
+                                    <span class="arrow-sub" aria-hidden="true">›</span>
+                                </a>
                                 <ul class="dropdown-menu">
                                     <li><a href="#" class="ext-link">Consultar Proyectos ↗</a></li>
                                     <li><a href="#" class="ext-link">Consultar Actividades ↗</a></li>
                                 </ul>
                             </li>
-                            <li class="dropdown dropdown-submenu has-submenu"><a href="#">Educación Continua</a>
+                            <li class="dropdown dropdown-submenu has-submenu">
+                                <a href="#">
+                                    Educación Continua
+                                    <span class="arrow-sub" aria-hidden="true">›</span>
+                                </a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="#" class="ext-link">Educación Continua ↗</a></li>
-                                    <li><a href="#" class="ext-link">ICAI ↗</a></li>
-                                    <li><a href="#" class="ext-link">CISCO ↗</a></li>
-                                    <li><a href="#" class="ext-link">La UNA te prepara ↗</a></li>
+                                    <li><a href="#" class="ext-link">Cursos de Actualización Profesional ↗</a></li>
+                                    <li><a href="#" class="ext-link">Academia ICAI ↗</a></li>
+                                    <li><a href="#" class="ext-link">Academia CISCO UNA ↗</a></li>
+                                    <li><a href="#" class="ext-link">Programa La UNA te prepara ↗</a></li>
                                 </ul>
                             </li>
-                            <li class="dropdown dropdown-submenu has-submenu"><a href="#">Laboratorios y Centros</a>
+                            <li class="dropdown dropdown-submenu has-submenu">
+                                <a href="#">
+                                    Laboratorios Especializados
+                                    <span class="arrow-sub" aria-hidden="true">›</span>
+                                </a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="#" class="ext-link">Laboratorio Base de Datos ↗</a></li>
-                                    <li><a href="#" class="ext-link">Laboratorio de Imágenes ↗</a></li>
+                                    <li><a href="#" class="ext-link">Laboratorio de Bases de Datos ↗</a></li>
+                                    <li><a href="#" class="ext-link">Laboratorio de Procesamiento de Imágenes ↗</a></li>
                                 </ul>
                             </li>
                         </ul>
                     </li>
 
-                    <li class="dropdown"><a href="#" id="menu-estudiantes">Estudiantes y Egresados ▾</a>
+                    <li class="dropdown">
+                        <a href="#" id="menu-estudiantes">
+                            Estudiantes y Egresados
+                            <svg class="chevron-icon" viewBox="0 0 24 24" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </a>
                         <ul class="dropdown-menu">
-                            <li class="dropdown dropdown-submenu has-submenu"><a href="#">Trámites Estudiantiles</a>
+                            <li class="dropdown dropdown-submenu has-submenu">
+                                <a href="#">
+                                    Trámites Estudiantiles
+                                    <span class="arrow-sub" aria-hidden="true">›</span>
+                                </a>
                                 <ul class="dropdown-menu">
                                     <li><a href="#" class="ext-link">Carné Estudiantil ↗</a></li>
-                                    <li><a href="#" class="ext-link">Marchamo / Sobrepasos ↗</a></li>
-                                    <li><a href="#">Trámites Licenciatura</a></li>
-                                    <li><a href="#">Procedimientos y Banner</a></li>
+                                    <li><a href="#" class="ext-link">Marchamo y Sobrepasos ↗</a></li>
+                                    <li><a href="#">Trámites de Licenciatura</a></li>
+                                    <li><a href="#">Procedimientos Académicos</a></li>
                                 </ul>
                             </li>
                             <li class="dropdown dropdown-submenu has-submenu">
-                                <a href="pps.html" class="highlight-link" id="link-pps-menu">Práctica Profesional (PPS)</a>
+                                <a href="pps.html" class="highlight-link" id="link-pps-menu">
+                                    Práctica Profesional (PPS)
+                                    <span class="arrow-sub" aria-hidden="true">›</span>
+                                </a>
                                 <ul class="dropdown-menu">
                                     <li><a href="pps.html">¿Qué es y Cómo prepararte?</a></li>
                                     <li><a href="pps.html#documentacion">Documentación y Plantillas</a></li>
                                     <li><a href="pps.html#faqs">Preguntas Frecuentes (FAQs)</a></li>
                                 </ul>
                             </li>
-                            <li class="dropdown dropdown-submenu has-submenu"><a href="#">Innovación y Emprendimiento</a>
+                            <li class="dropdown dropdown-submenu has-submenu">
+                                <a href="#">
+                                    Innovación y Emprendimiento
+                                    <span class="arrow-sub" aria-hidden="true">›</span>
+                                </a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="#">Yo Creativ@ y App Créditos</a></li>
-                                    <li><a href="#" class="ext-link">eiEmprende / Expoempresa ↗</a></li>
+                                    <li><a href="#">Yo Creativ@ y Reconocimiento de Créditos</a></li>
+                                    <li><a href="#" class="ext-link">eiEmprende / Expo-Empresa ↗</a></li>
                                 </ul>
                             </li>
-                            <li class="dropdown dropdown-submenu has-submenu"><a href="#">Egresados y Empleabilidad</a>
+                            <li class="dropdown dropdown-submenu has-submenu">
+                                <a href="#">
+                                    Egresados y Empleabilidad
+                                    <span class="arrow-sub" aria-hidden="true">›</span>
+                                </a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="#">Actualización de Datos</a></li>
-                                    <li><a href="#" class="ext-link">Ver Ofertas de Empleo ↗</a></li>
-                                    <li><a href="#">Publicar Empleo</a></li>
+                                    <li><a href="#">Actualización de Datos de Graduados</a></li>
+                                    <li><a href="#" class="ext-link">Bolsa de Empleo TIC ↗</a></li>
+                                    <li><a href="#">Publicar Oferta Laboral</a></li>
                                 </ul>
                             </li>
                         </ul>
                     </li>
 
-                    <li class="dropdown"><a href="#">Docentes y Admin ▾</a>
+                    <li class="dropdown">
+                        <a href="#">
+                            Docentes y Admin
+                            <svg class="chevron-icon" viewBox="0 0 24 24" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </a>
                         <ul class="dropdown-menu">
                             <li><a href="#">Trámites Internos</a></li>
                             <li><a href="#">Desarrollo Docente y Perfiles</a></li>
                             <li><a href="#">Guías, Plantillas e Instrumentos</a></li>
-                            <li><a href="#">Trabaje con nosotros</a></li>
+                            <li><a href="#">Oportunidades de Empleo Docente</a></li>
                         </ul>
                     </li>
 
-                    <li class="dropdown dropdown-right"><a href="#">Documentos ▾</a>
+                    <li class="dropdown dropdown-right">
+                        <a href="#">
+                            Documentos
+                            <svg class="chevron-icon" viewBox="0 0 24 24" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </a>
                         <ul class="dropdown-menu">
-                            <li><a href="#">Normas APA</a></li>
-                            <li><a href="#">Sesiones CTFG</a></li>
-                            <li class="dropdown dropdown-submenu has-submenu"><a href="#">Actas Oficiales</a>
+                            <li><a href="#">Guía de Normas APA Institucional</a></li>
+                            <li><a href="#">Sesiones del CTFG</a></li>
+                            <li class="dropdown dropdown-submenu has-submenu">
+                                <a href="#">
+                                    Actas Oficiales
+                                    <span class="arrow-sub" aria-hidden="true">›</span>
+                                </a>
                                 <ul class="dropdown-menu">
                                     <li><a href="#">Consejo de Unidad</a></li>
-                                    <li><a href="#">Asamblea Académicos</a></li>
+                                    <li><a href="#">Asamblea de Académicos</a></li>
                                     <li><a href="#">Asamblea de Unidad</a></li>
                                 </ul>
                             </li>
-                            <li class="dropdown dropdown-submenu has-submenu"><a href="#">Documentación Histórica</a>
+                            <li class="dropdown dropdown-submenu has-submenu">
+                                <a href="#">
+                                    Documentación Curricular
+                                    <span class="arrow-sub" aria-hidden="true">›</span>
+                                </a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="#">Ingeniería 2024 / 2025</a></li>
+                                    <li><a href="#">Planes de Ingeniería 2024 / 2025</a></li>
                                 </ul>
                             </li>
                         </ul>
                     </li>
 
-                    <li class="dropdown dropdown-right"><a href="#">Portal de Sistemas ▾</a>
+                    <li class="dropdown dropdown-right">
+                        <a href="#">
+                            Portal de Sistemas
+                            <svg class="chevron-icon" viewBox="0 0 24 24" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </a>
                         <ul class="dropdown-menu">
-                            <li class="dropdown dropdown-submenu has-submenu"><a href="#">Sistemas Académicos</a>
+                            <li class="dropdown dropdown-submenu has-submenu">
+                                <a href="#">
+                                    Sistemas Académicos
+                                    <span class="arrow-sub" aria-hidden="true">›</span>
+                                </a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="#" class="ext-link">Matrícula ↗</a></li>
-                                    <li><a href="#" class="ext-link">Aula Virtual ↗</a></li>
-                                    <li><a href="#" class="ext-link">SIDUNA / Sistema Integrado ↗</a></li>
+                                    <li><a href="#" class="ext-link">Matrícula en Línea ↗</a></li>
+                                    <li><a href="#" class="ext-link">Aula Virtual UNA ↗</a></li>
+                                    <li><a href="#" class="ext-link">SIDUNA - Sistema Integrado ↗</a></li>
                                     <li><a href="#" class="ext-link">BANNER ↗</a></li>
                                     <li><a href="#" class="ext-link">Estadísticas Estudiantiles ↗</a></li>
                                 </ul>
                             </li>
-                            <li class="dropdown dropdown-submenu has-submenu"><a href="#">Gestión Admin y Docente</a>
+                            <li class="dropdown dropdown-submenu has-submenu">
+                                <a href="#">
+                                    Gestión Admin y Docente
+                                    <span class="arrow-sub" aria-hidden="true">›</span>
+                                </a>
                                 <ul class="dropdown-menu">
                                     <li><a href="#" class="ext-link">SIGESA / SIBEUNA / AGDe ↗</a></li>
-                                    <li><a href="#" class="ext-link">Secretarial / Teletrabajo ↗</a></li>
-                                    <li><a href="#" class="ext-link">Horarios / Junta Becas ↗</a></li>
-                                    <li><a href="#" class="ext-link">Proceso Acreditación ↗</a></li>
+                                    <li><a href="#" class="ext-link">Secretarial y Teletrabajo ↗</a></li>
+                                    <li><a href="#" class="ext-link">Horarios y Becas ↗</a></li>
+                                    <li><a href="#" class="ext-link">Proceso de Acreditación ↗</a></li>
                                 </ul>
                             </li>
-                            <li class="dropdown dropdown-submenu has-submenu"><a href="#">Herramientas y Software</a>
+                            <li class="dropdown dropdown-submenu has-submenu">
+                                <a href="#">
+                                    Herramientas y Software
+                                    <span class="arrow-sub" aria-hidden="true">›</span>
+                                </a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="#" class="ext-link">UNATUBE / Tu aprendizaje ↗</a></li>
-                                    <li><a href="#" class="ext-link">Mathematica / Discretas / CDF ↗</a></li>
-                                    <li><a href="#" class="ext-link">Unos y Ceros ↗</a></li>
+                                    <li><a href="#" class="ext-link">UNATUBE / Recursos Digitales ↗</a></li>
+                                    <li><a href="#" class="ext-link">Wolfram Mathematica ↗</a></li>
+                                    <li><a href="#" class="ext-link">Revista Unos y Ceros ↗</a></li>
                                 </ul>
                             </li>
-                            <li class="dropdown dropdown-submenu has-submenu"><a href="#">Servicios TIC</a>
+                            <li class="dropdown dropdown-submenu has-submenu">
+                                <a href="#">
+                                    Servicios TIC
+                                    <span class="arrow-sub" aria-hidden="true">›</span>
+                                </a>
                                 <ul class="dropdown-menu">
                                     <li><a href="#" class="ext-link">Correo Institucional ↗</a></li>
-                                    <li><a href="#" class="ext-link">Eduroam / Cambio de Clave ↗</a></li>
-                                    <li><a href="#" class="ext-link">Servicio Técnico ↗</a></li>
+                                    <li><a href="#" class="ext-link">Red Eduroam / Claves ↗</a></li>
+                                    <li><a href="#" class="ext-link">Mesa de Ayuda Técnica TIC ↗</a></li>
                                 </ul>
                             </li>
                         </ul>
@@ -198,141 +322,241 @@
     </header>
 
     <main role="main">
-        <!-- CAROUSEL (HERO) -->
-        <section class="carousel" aria-label="Carrusel informativo institucional">
+        <!-- CAROUSEL (HERO INSTITUCIONAL) -->
+        <section class="carousel" aria-label="Novedades destacadas de la Escuela de Informática">
             <!-- Slide 1 -->
             <article class="slide active"
                 style="background-image: url('https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=1920&q=80');">
                 <div class="slide-content">
-                    <h1>Navegación Depurada y Eficiente</h1>
-                    <p>Un menú estructurado que elimina la duplicación. Descubre cómo la nueva arquitectura centraliza todos los servicios de la Escuela.</p>
+                    <div class="hero-kicker">Arquitectura de Información Optimizada</div>
+                    <h1>Estructura de Navegación Depurada y Eficiente</h1>
+                    <p>Un modelo de navegación centrado en los usuarios que consolida accesos dispersos y centraliza todos los servicios académicos y tecnológicos de la Escuela.</p>
+                    <div class="slide-cta-group">
+                        <a href="pps.html" class="btn-hero-primary">
+                            Ir a Práctica Profesional (PPS)
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        </a>
+                        <a href="#destacados" class="btn-hero-secondary">Conocer la Nueva Organización</a>
+                    </div>
                 </div>
             </article>
+
             <!-- Slide 2 -->
             <article class="slide"
                 style="background-image: url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1920&q=80');">
                 <div class="slide-content">
-                    <h1>Sistemas Centralizados</h1>
-                    <p>SIGESA, BANNER y Aula Virtual ahora tienen un lugar único y lógico dentro de nuestro nuevo Portal de Sistemas.</p>
+                    <div class="hero-kicker">Servicios Centralizados</div>
+                    <h1>Portal de Sistemas Unificado</h1>
+                    <p>BANNER, Aula Virtual, SIGESA y SIDUNA ahora se integran de manera lógica en una categoría canónica diseñada para agilizar el flujo de trabajo diario.</p>
+                    <div class="slide-cta-group">
+                        <a href="#" class="btn-hero-primary">Explorar Portal de Sistemas</a>
+                    </div>
                 </div>
             </article>
+
             <!-- Slide 3 -->
             <article class="slide"
                 style="background-image: url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1920&q=80');">
                 <div class="slide-content">
-                    <h1>Trámites al Alcance</h1>
-                    <p>Todo lo que necesitan estudiantes, docentes y personal administrativo, organizado por perfiles para ahorrar tiempo.</p>
+                    <div class="hero-kicker">Trámites por Audiencia</div>
+                    <h1>Gestiones al Alcance de Cada Perfil</h1>
+                    <p>Organización jerárquica clara de requisitos, convocatorias de graduación y formularios oficiales tanto para estudiantes como para el cuerpo académico.</p>
+                    <div class="slide-cta-group">
+                        <a href="pps.html" class="btn-hero-primary">Consultar Trámites Estudiantiles</a>
+                    </div>
                 </div>
             </article>
         </section>
 
-        <!-- DESTACADOS (OVERLAPPING CAROUSEL) -->
-        <section class="features-section" aria-label="Aspectos destacados de la arquitectura">
+        <!-- DESTACADOS (CARDS GRID OVERLAPPING) -->
+        <section class="features-section" id="destacados" aria-label="Aspectos destacados de la arquitectura">
             <div class="cards-grid">
-                <article class="card">
-                    <span class="card-icon" aria-hidden="true">📚</span>
-                    <h3>Oferta y Posgrados</h3>
-                    <p>Las maestrías MATI, MATIE y MAGIT fueron rescatadas del menú administrativo y reubicadas correctamente en Oferta Académica.</p>
+                <!-- Card 1: Oferta Académica -->
+                <article class="feature-card">
+                    <div class="feature-icon-wrapper icon-red" aria-hidden="true">
+                        <svg viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+                    </div>
+                    <h3>Oferta Académica y Posgrados</h3>
+                    <p>Las maestrías MATI, MATIE y MAGIT fueron rescatadas del menú administrativo y reubicadas correctamente en Oferta Académica para facilitar la admisión.</p>
+                    <a href="#" class="feature-link">
+                        Explorar carreras y posgrados
+                        <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    </a>
                 </article>
-                <article class="card">
-                    <span class="card-icon" aria-hidden="true">⚙️</span>
-                    <h3>Sistemas Unificados</h3>
-                    <p>Los más de 12 sistemas exclusivos para administrativos y docentes ahora tienen un único hogar en el Portal de Sistemas.</p>
+
+                <!-- Card 2: Sistemas Unificados -->
+                <article class="feature-card">
+                    <div class="feature-icon-wrapper icon-blue" aria-hidden="true">
+                        <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg>
+                    </div>
+                    <h3>Portal de Sistemas Unificado</h3>
+                    <p>Los más de 12 sistemas exclusivos para administrativos, estudiantes y docentes ahora tienen un único hogar lógico clasificado por función técnica.</p>
+                    <a href="#" class="feature-link">
+                        Acceder al centro de software
+                        <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    </a>
                 </article>
-                <article class="card">
-                    <span class="card-icon" aria-hidden="true">🏢</span>
-                    <h3>Directorio Completo</h3>
-                    <p>Ahora es posible acceder rápidamente a las páginas de las 6 sedes, directores e investigadores desde "La Escuela".</p>
+
+                <!-- Card 3: Directorio y Sedes -->
+                <article class="feature-card">
+                    <div class="feature-icon-wrapper icon-navy" aria-hidden="true">
+                        <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                    </div>
+                    <h3>Directorio Institucional y Sedes</h3>
+                    <p>Acceso directo y unificado a los canales de las 6 sedes regionales, direcciones de carrera e investigadores desde la sección "La Escuela".</p>
+                    <a href="#" class="feature-link">
+                        Consultar directorio oficial
+                        <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                    </a>
                 </article>
             </div>
         </section>
 
         <!-- NOVEDADES / NOTICIAS -->
         <section class="news-section" aria-label="Últimas novedades de la Escuela">
-            <header class="news-header">
-                <h2>Últimas Novedades</h2>
-                <a href="#">Ver todas las noticias →</a>
+            <header class="section-header">
+                <div class="section-header-title">
+                    <h2>Últimas Novedades y Convocatorias</h2>
+                    <p>Actualizaciones académicas, eventos de investigación y avisos estudiantiles oficiales.</p>
+                </div>
+                <a href="#" class="view-all">
+                    Ver todas las noticias
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </a>
             </header>
+
             <div class="news-grid">
                 <!-- Noticia 1 -->
                 <article class="news-card">
-                    <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&w=600&q=80"
-                        alt="Investigación en nano biomateriales" class="news-img" loading="lazy">
+                    <div class="news-thumb">
+                        <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&w=600&q=80"
+                            alt="Investigación en nano biomateriales" class="news-img" loading="lazy">
+                        <span class="news-category-badge">Investigación</span>
+                    </div>
                     <div class="news-content">
-                        <time class="news-date" datetime="2026-08-10">10 Ago 2026</time>
+                        <div class="news-meta">
+                            <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                            <time datetime="2026-08-10">10 de Agosto, 2026</time>
+                        </div>
                         <h3>Avances en el Proyecto de Innovación Tecnológica (Nano Banana)</h3>
-                        <p>Los investigadores de nuestra escuela han presentado resultados prometedores en el desarrollo de bio-materiales aplicados a la informática, un proyecto pionero en la región.</p>
-                        <a href="#" class="read-more">Leer más →</a>
+                        <p>Los investigadores de nuestra escuela han presentado resultados prometedores en el desarrollo de bio-materiales aplicados a la informática, un proyecto pionero en la región centroamericana.</p>
+                        <div class="news-action">
+                            <a href="#" class="news-link">
+                                Leer artículo completo
+                                <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                            </a>
+                        </div>
                     </div>
                 </article>
+
                 <!-- Noticia 2: PPS enlace directo -->
                 <article class="news-card" id="news-card-pps">
-                    <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=600&q=80"
-                        alt="Estudiantes en práctica profesional supervisada" class="news-img" loading="lazy">
+                    <div class="news-thumb">
+                        <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=600&q=80"
+                            alt="Estudiantes en práctica profesional supervisada" class="news-img" loading="lazy">
+                        <span class="news-category-badge badge-pps">Trámite de Graduación</span>
+                    </div>
                     <div class="news-content">
-                        <time class="news-date" datetime="2026-08-05">05 Ago 2026</time>
+                        <div class="news-meta">
+                            <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                            <time datetime="2026-08-05">05 de Agosto, 2026</time>
+                        </div>
                         <h3><a href="pps.html">Apertura de inscripciones para Práctica Profesional Supervisada</a></h3>
-                        <p>Ya se encuentra disponible toda la documentación actualizada, directrices del CTFG y las fechas límite para aplicar a la PPS en el próximo ciclo lectivo.</p>
-                        <a href="pps.html" class="read-more" id="cta-news-pps">Ir al trámite de PPS →</a>
+                        <p>Ya se encuentra disponible toda la documentación normada, directrices del CTFG y el cronograma de fechas perentorias para radicar el anteproyecto en el II Ciclo 2026.</p>
+                        <div class="news-action">
+                            <a href="pps.html" class="news-link" id="cta-news-pps" style="color: var(--una-red); font-weight: 700;">
+                                Ir al trámite oficial de PPS
+                                <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                            </a>
+                        </div>
                     </div>
                 </article>
+
                 <!-- Noticia 3 -->
                 <article class="news-card">
-                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=600&q=80"
-                        alt="Modernización del laboratorio de bases de datos" class="news-img" loading="lazy">
+                    <div class="news-thumb">
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=600&q=80"
+                            alt="Modernización del laboratorio de bases de datos" class="news-img" loading="lazy">
+                        <span class="news-category-badge">Infraestructura</span>
+                    </div>
                     <div class="news-content">
-                        <time class="news-date" datetime="2026-08-01">01 Ago 2026</time>
-                        <h3>Nuevos equipos en el Laboratorio de Bases de Datos</h3>
-                        <p>La escuela ha renovado la infraestructura de servidores para que los estudiantes de Ingeniería cuenten con entornos de prueba de nivel empresarial.</p>
-                        <a href="#" class="read-more">Leer más →</a>
+                        <div class="news-meta">
+                            <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                            <time datetime="2026-08-01">01 de Agosto, 2026</time>
+                        </div>
+                        <h3>Nuevos entornos en el Laboratorio de Bases de Datos</h3>
+                        <p>La escuela ha renovado los clústeres de cómputo y servidores para que los estudiantes de Ingeniería cuenten con entornos de prueba de alta disponibilidad y estándares corporativos.</p>
+                        <div class="news-action">
+                            <a href="#" class="news-link">
+                                Leer artículo completo
+                                <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                            </a>
+                        </div>
                     </div>
                 </article>
             </div>
         </section>
     </main>
 
-    <!-- FOOTER -->
+    <!-- FOOTER INSTITUCIONAL -->
     <footer role="contentinfo">
         <div class="footer-container">
-            <section class="footer-col" aria-label="Contacto Institucional">
-                <h4>Contacto Institucional</h4>
-                <ul>
-                    <li><a href="tel:50622773000">Tel: (506) 2277-3000</a></li>
-                    <li><a href="#">Campus Omar Dengo, Heredia</a></li>
-                    <li><a href="#">Soporte Técnico TIC</a></li>
-                </ul>
-            </section>
-            <section class="footer-col" aria-label="Accesos Rápidos">
+            <div class="footer-brand">
+                <h3>Escuela de Informática</h3>
+                <p>Facultad de Ciencias Exactas y Naturales<br>Universidad Nacional de Costa Rica.<br>Campus Benjamín Núñez, Lagunilla de Heredia.</p>
+                <p style="font-size: 13px;">
+                    <strong>Teléfono:</strong> (506) 2562-6363 / 2562-6365<br>
+                    <strong>Correo:</strong> <a href="mailto:escinf@una.cr" style="color: #93C5FD;">escinf@una.cr</a>
+                </p>
+            </div>
+
+            <div class="footer-col">
                 <h4>Accesos Rápidos</h4>
                 <ul>
                     <li><a href="pps.html">Práctica Profesional (PPS)</a></li>
-                    <li><a href="#">Estudiantes y Matrícula</a></li>
-                    <li><a href="#">Docentes y Administrativos</a></li>
+                    <li><a href="#">Matrícula en Línea</a></li>
+                    <li><a href="#">Aula Virtual Institucional</a></li>
+                    <li><a href="#">Bolsa de Empleo TIC</a></li>
                     <li><a href="#">Educación Continua</a></li>
                 </ul>
-            </section>
-            <section class="footer-col" aria-label="Redes Sociales">
-                <h4>Redes Sociales</h4>
+            </div>
+
+            <div class="footer-col">
+                <h4>Trámites y Servicios</h4>
                 <ul>
-                    <li><a href="#" class="ext-link">Facebook ↗</a></li>
-                    <li><a href="#" class="ext-link">Instagram ↗</a></li>
-                    <li><a href="#" class="ext-link">YouTube ↗</a></li>
-                    <li><a href="#" class="ext-link">LinkedIn (Exalumnos) ↗</a></li>
+                    <li><a href="#">Directorio de Académicos</a></li>
+                    <li><a href="#">Calendario Académico 2026</a></li>
+                    <li><a href="#">Normativa y Reglamentos</a></li>
+                    <li><a href="#">Soporte Técnico TIC</a></li>
+                    <li><a href="#">Formularios de Licenciatura</a></li>
                 </ul>
-            </section>
+            </div>
+
+            <div class="footer-col">
+                <h4>Canales Oficiales</h4>
+                <ul>
+                    <li><a href="#" class="ext-link">Facebook Institucional ↗</a></li>
+                    <li><a href="#" class="ext-link">Instagram Oficial ↗</a></li>
+                    <li><a href="#" class="ext-link">Canal de YouTube ↗</a></li>
+                    <li><a href="#" class="ext-link">LinkedIn Comunidad UNA ↗</a></li>
+                </ul>
+            </div>
         </div>
+
         <div class="footer-bottom">
-            <p>&copy; 2026 Universidad Nacional de Costa Rica. Prototipo de Arquitectura UI/UX - Escuela de Informática.</p>
+            <p>&copy; 2026 Universidad Nacional de Costa Rica. Prototipo oficial de Arquitectura de Información - Escuela de Informática.</p>
+            <p>Heredia, Costa Rica</p>
         </div>
     </footer>
 
-    <!-- BOTÓN FLOTANTE FIJO DE WHATSAPP -->
+    <!-- BOTÓN FLOTANTE DE WHATSAPP -->
     <a href="https://wa.me/50622773000?text=Hola,%20solicito%20información%20sobre%20los%20trámites%20de%20la%20Escuela%20de%20Informática" 
        class="whatsapp-float" 
        id="whatsapp-btn"
        target="_blank" 
        rel="noopener noreferrer" 
        aria-label="Atención al Estudiante vía WhatsApp">
+        <span class="whatsapp-status-dot" aria-hidden="true"></span>
         <span class="whatsapp-tooltip">Atención estudiantil por WhatsApp</span>
         <svg viewBox="0 0 24 24" aria-hidden="true">
             <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
