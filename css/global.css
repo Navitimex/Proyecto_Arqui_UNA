@@ -569,7 +569,363 @@ footer[role="contentinfo"] {
     }
 }
 
-/* === RESPONSIVE === */
+/* === BOTÓN HAMBURGUESA INSTITUCIONAL (MOBILE / TABLET) === */
+.hamburger-btn {
+    display: none;
+    align-items: center;
+    gap: 9px;
+    background-color: var(--neutral-100);
+    border: 1px solid var(--neutral-300);
+    color: var(--una-blue);
+    padding: 8px 14px;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    font-family: var(--font-heading);
+    font-size: 13px;
+    font-weight: 700;
+    transition: all 0.2s ease;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.hamburger-btn:hover {
+    background-color: var(--neutral-200);
+    color: var(--una-red);
+    border-color: var(--neutral-400);
+}
+
+.hamburger-box {
+    width: 20px;
+    height: 14px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.hamburger-line {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: currentColor;
+    border-radius: 2px;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.hamburger-label {
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+    font-size: 11.5px;
+}
+
+/* === BACKDROP Y CAJÓN MÓVIL OFF-CANVAS === */
+body.drawer-open {
+    overflow: hidden !important;
+}
+
+.drawer-backdrop {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(7, 21, 38, 0.65);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    z-index: 1999;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.3s ease;
+}
+
+.drawer-backdrop.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.mobile-drawer {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 88vw;
+    max-width: 390px;
+    background-color: var(--white);
+    z-index: 2000;
+    display: flex;
+    flex-direction: column;
+    box-shadow: -8px 0 35px rgba(0, 0, 0, 0.25);
+    transform: translateX(100%);
+    transition: transform 0.32s cubic-bezier(0.16, 1, 0.3, 1);
+    border-left: 3px solid var(--una-red);
+}
+
+.mobile-drawer.open {
+    transform: translateX(0);
+}
+
+/* Header del Drawer */
+.drawer-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 20px;
+    border-bottom: 1px solid var(--neutral-200);
+    background-color: var(--neutral-50);
+}
+
+.drawer-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.drawer-brand-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.drawer-title {
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: 14.5px;
+    color: var(--una-blue);
+    line-height: 1.2;
+    letter-spacing: -0.2px;
+}
+
+.drawer-subtitle {
+    font-size: 11px;
+    color: var(--neutral-500);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+}
+
+.drawer-close-btn {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1px solid var(--neutral-200);
+    background-color: var(--white);
+    color: var(--neutral-600);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.drawer-close-btn:hover {
+    background-color: var(--una-red-soft);
+    color: var(--una-red);
+    border-color: rgba(195, 0, 17, 0.2);
+}
+
+.drawer-close-btn svg {
+    width: 18px;
+    height: 18px;
+    stroke: currentColor;
+    stroke-width: 2.2;
+    fill: none;
+}
+
+/* Cuerpo del Drawer / Navegación */
+.drawer-body {
+    flex: 1;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    padding: 10px 0;
+}
+
+.mobile-menu-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.mobile-menu-item {
+    border-bottom: 1px solid var(--neutral-100);
+}
+
+.mobile-accordion-btn {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: none;
+    border: none;
+    font-family: var(--font-heading);
+    font-size: 14.5px;
+    font-weight: 700;
+    color: var(--una-blue);
+    cursor: pointer;
+    text-align: left;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.mobile-accordion-btn:hover,
+.mobile-accordion-btn.active {
+    background-color: var(--neutral-50);
+    color: var(--una-red);
+}
+
+.mobile-chevron {
+    width: 14px;
+    height: 14px;
+    stroke: var(--neutral-400);
+    stroke-width: 2.5;
+    fill: none;
+    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), stroke 0.2s ease;
+    flex-shrink: 0;
+}
+
+.mobile-accordion-btn.active .mobile-chevron {
+    transform: rotate(180deg);
+    stroke: var(--una-red);
+}
+
+/* Subpaneles del Acordeón */
+.mobile-subpanel {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    background-color: var(--neutral-50);
+}
+
+.mobile-sublist {
+    list-style: none;
+    padding: 6px 0 12px 0;
+    margin: 0;
+}
+
+.mobile-sublist li a {
+    display: block;
+    padding: 9px 20px 9px 28px;
+    font-size: 13.5px;
+    color: var(--neutral-700);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.mobile-sublist li a:hover {
+    color: var(--una-red);
+    background-color: rgba(195, 0, 17, 0.04);
+}
+
+.mobile-group-title {
+    display: block;
+    padding: 10px 20px 4px 28px;
+    font-size: 11px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    color: var(--neutral-500);
+}
+
+.mobile-sublist-nested {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.mobile-sublist-nested li a {
+    padding-left: 36px !important;
+    font-size: 13px !important;
+}
+
+.mobile-highlight-link {
+    background-color: var(--una-red-soft) !important;
+    color: var(--una-red) !important;
+    font-weight: 700 !important;
+    border-left: 3px solid var(--una-red);
+    display: inline-flex !important;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+}
+
+.mobile-highlight-link svg {
+    width: 15px;
+    height: 15px;
+    stroke: currentColor;
+    stroke-width: 2.2;
+    fill: none;
+}
+
+/* Pie del Drawer (Accesos Institucionales) */
+.drawer-footer {
+    background-color: var(--una-blue-dark);
+    padding: 18px 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.drawer-footer-title {
+    display: block;
+    font-size: 10.5px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: #94A3B8;
+    margin-bottom: 10px;
+}
+
+.drawer-shortcuts-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.drawer-shortcut-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 9px 12px;
+    border-radius: var(--radius-sm);
+    background-color: rgba(255, 255, 255, 0.08);
+    color: #E2E8F0;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    transition: all 0.2s ease;
+}
+
+.drawer-shortcut-btn:hover {
+    background-color: rgba(255, 255, 255, 0.18);
+    color: #FFFFFF;
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.drawer-shortcut-btn svg {
+    width: 13px;
+    height: 13px;
+    stroke: currentColor;
+    stroke-width: 2;
+    fill: none;
+}
+
+.drawer-campus-tag {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 11px;
+    color: #94A3B8;
+    padding-top: 8px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.drawer-campus-tag svg {
+    width: 13px;
+    height: 13px;
+    stroke: currentColor;
+    stroke-width: 2;
+    fill: none;
+    flex-shrink: 0;
+}
+
+/* === REGLAS ADAPTATIVAS (RESPONSIVE SYSTEM) === */
 @media (max-width: 1280px) {
     nav > ul > li > a {
         padding: 22px 7px;
@@ -580,35 +936,24 @@ footer[role="contentinfo"] {
     }
 }
 
-@media (max-width: 1080px) {
-    .top-bar {
-        display: none;
+/* Punto de quiebre para Tablet y Mobile (< 1024px) */
+@media (max-width: 1024px) {
+    /* Ocultar barra de navegación horizontal de escritorio */
+    nav[aria-label="Navegación principal"] {
+        display: none !important;
+    }
+
+    /* Mostrar botón hamburguesa */
+    .hamburger-btn {
+        display: inline-flex;
     }
 
     .header-container {
-        flex-wrap: wrap;
-        padding: 10px 16px;
+        padding: 10px 20px;
     }
 
     .brand-logo {
         padding: 4px 0;
-    }
-
-    nav {
-        width: 100%;
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
-        border-top: 1px solid var(--neutral-200);
-    }
-
-    nav ul {
-        white-space: nowrap;
-        display: flex;
-    }
-
-    nav > ul > li > a {
-        padding: 14px 12px;
-        font-size: 13px;
     }
 
     .footer-container {
@@ -617,7 +962,20 @@ footer[role="contentinfo"] {
     }
 }
 
-@media (max-width: 600px) {
+/* Dispositivos Móviles (< 768px) */
+@media (max-width: 768px) {
+    .top-bar-location {
+        display: none;
+    }
+
+    .top-bar-right {
+        gap: 12px;
+    }
+
+    .top-bar-right a:nth-child(n+3) {
+        display: none; /* Ocultar directorio y sistemas en barra superior en móvil ya que están en el menú hamburguesa */
+    }
+
     .brand-title {
         font-size: 14.5px;
     }
@@ -627,24 +985,55 @@ footer[role="contentinfo"] {
     }
 
     .logo-badge {
-        width: 38px;
-        height: 38px;
+        width: 40px;
+        height: 40px;
         font-size: 15px;
     }
 
     .footer-container {
         grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .footer-bottom-container {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+    }
+}
+
+/* Móviles Pequeños (< 480px) */
+@media (max-width: 480px) {
+    .top-bar {
+        font-size: 11.5px;
+        padding: 5px 0;
+    }
+
+    .brand-title {
+        font-size: 13.5px;
+    }
+
+    .brand-subtitle {
+        font-size: 9px;
+    }
+
+    .hamburger-label {
+        display: none; /* Solo icono de hamburguesa en pantallas muy estrechas */
+    }
+
+    .hamburger-btn {
+        padding: 8px 10px;
     }
 
     .whatsapp-float {
-        bottom: 20px;
-        right: 20px;
-        width: 52px;
-        height: 52px;
+        bottom: 18px;
+        right: 18px;
+        width: 50px;
+        height: 50px;
     }
 
     .whatsapp-float svg {
-        width: 26px;
-        height: 26px;
+        width: 24px;
+        height: 24px;
     }
 }

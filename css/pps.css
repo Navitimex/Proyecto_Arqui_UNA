@@ -939,6 +939,17 @@ main {
 
     .page-header p.lead {
         font-size: 15px;
+        margin-bottom: 22px;
+    }
+
+    .header-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .header-actions .btn {
+        width: 100%;
+        text-align: center;
     }
 
     .specs-overview-card {

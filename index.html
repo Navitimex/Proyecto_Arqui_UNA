@@ -318,8 +318,231 @@
                     </li>
                 </ul>
             </nav>
+
+            <!-- BOTÓN HAMBURGUESA ACCESIBLE (MOBILE & TABLET) -->
+            <button class="hamburger-btn" id="mobileNavToggle" aria-label="Abrir menú de navegación móvil" aria-expanded="false" aria-controls="mobileDrawer">
+                <span class="hamburger-box" aria-hidden="true">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </span>
+                <span class="hamburger-label">Menú</span>
+            </button>
         </div>
     </header>
+
+    <!-- BACKDROP OSCURO PARA EL MENÚ MÓVIL -->
+    <div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+    <!-- CAJÓN DE NAVEGACIÓN MÓVIL OFF-CANVAS -->
+    <aside class="mobile-drawer" id="mobileDrawer" aria-label="Navegación móvil" aria-hidden="true">
+        <!-- Encabezado del Cajón -->
+        <div class="drawer-header">
+            <div class="drawer-brand">
+                <div class="logo-badge" aria-hidden="true">
+                    UNA
+                    <span class="sub">CR</span>
+                </div>
+                <div class="drawer-brand-text">
+                    <span class="drawer-title">INFORMÁTICA UNA</span>
+                    <span class="drawer-subtitle">Menú Institucional</span>
+                </div>
+            </div>
+            <button class="drawer-close-btn" id="drawerCloseBtn" aria-label="Cerrar menú de navegación">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Cuerpo del Menú Móvil (Acordeón de Categorías) -->
+        <div class="drawer-body">
+            <nav class="mobile-accordion-nav" aria-label="Menú acordeón móvil">
+                <ul class="mobile-menu-list">
+                    <!-- 1. La Escuela -->
+                    <li class="mobile-menu-item">
+                        <button class="mobile-accordion-btn" aria-expanded="false">
+                            <span>La Escuela</span>
+                            <svg class="mobile-chevron" viewBox="0 0 24 24" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </button>
+                        <div class="mobile-subpanel">
+                            <ul class="mobile-sublist">
+                                <li><a href="#">Acerca de la Escuela</a></li>
+                                <li>
+                                    <span class="mobile-group-title">Sedes Regionales</span>
+                                    <ul class="mobile-sublist-nested">
+                                        <li><a href="#">Sede Regional Occidente ↗</a></li>
+                                        <li><a href="#">Campus Sarapiquí ↗</a></li>
+                                        <li><a href="#">Campus Liberia ↗</a></li>
+                                        <li><a href="#">Campus Nicoya ↗</a></li>
+                                        <li><a href="#">Pérez Zeledón ↗</a></li>
+                                        <li><a href="#">Coto ↗</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <span class="mobile-group-title">Acreditación SINAES</span>
+                                    <ul class="mobile-sublist-nested">
+                                        <li><a href="#">Documentación Oficial</a></li>
+                                        <li><a href="#">Informes de Autoevaluación</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Directorio Institucional ↗</a></li>
+                                <li><a href="#">Normativa General ↗</a></li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <!-- 2. Oferta Académica -->
+                    <li class="mobile-menu-item">
+                        <button class="mobile-accordion-btn" aria-expanded="false">
+                            <span>Oferta Académica</span>
+                            <svg class="mobile-chevron" viewBox="0 0 24 24" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </button>
+                        <div class="mobile-subpanel">
+                            <ul class="mobile-sublist">
+                                <li><a href="#">Diplomado en Sistemas de Información</a></li>
+                                <li><a href="#">Bachillerato en Ingeniería en Sistemas</a></li>
+                                <li><a href="#">Licenciatura en Ingeniería en Sistemas</a></li>
+                                <li>
+                                    <span class="mobile-group-title">Posgrados y Maestrías</span>
+                                    <ul class="mobile-sublist-nested">
+                                        <li><a href="#">MATI - Aplicaciones TI ↗</a></li>
+                                        <li><a href="#">MATIE - Innovación Educativa ↗</a></li>
+                                        <li><a href="#">MAGIT - Gestión Tecnológica ↗</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <!-- 3. Investigación y Extensión -->
+                    <li class="mobile-menu-item">
+                        <button class="mobile-accordion-btn" aria-expanded="false">
+                            <span>Investigación y Extensión</span>
+                            <svg class="mobile-chevron" viewBox="0 0 24 24" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </button>
+                        <div class="mobile-subpanel">
+                            <ul class="mobile-sublist">
+                                <li><a href="#">Líneas de Investigación Oficiales</a></li>
+                                <li><a href="#">Consultar Proyectos y Actividades ↗</a></li>
+                                <li>
+                                    <span class="mobile-group-title">Educación Continua</span>
+                                    <ul class="mobile-sublist-nested">
+                                        <li><a href="#">Cursos de Actualización ↗</a></li>
+                                        <li><a href="#">Academia ICAI ↗</a></li>
+                                        <li><a href="#">Academia CISCO UNA ↗</a></li>
+                                        <li><a href="#">La UNA te prepara ↗</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Laboratorios Especializados ↗</a></li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <!-- 4. Estudiantes y Egresados -->
+                    <li class="mobile-menu-item">
+                        <button class="mobile-accordion-btn" aria-expanded="false">
+                            <span>Estudiantes y Egresados</span>
+                            <svg class="mobile-chevron" viewBox="0 0 24 24" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </button>
+                        <div class="mobile-subpanel">
+                            <ul class="mobile-sublist">
+                                <li>
+                                    <a href="pps.html" class="mobile-highlight-link">
+                                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
+                                        Práctica Profesional (PPS)
+                                    </a>
+                                </li>
+                                <li>
+                                    <span class="mobile-group-title">Trámites Estudiantiles</span>
+                                    <ul class="mobile-sublist-nested">
+                                        <li><a href="#">Carné Estudiantil ↗</a></li>
+                                        <li><a href="#">Marchamo y Sobrepasos ↗</a></li>
+                                        <li><a href="#">Trámites de Licenciatura</a></li>
+                                        <li><a href="#">Procedimientos Académicos</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Innovación y Emprendimiento (Yo Creativ@)</a></li>
+                                <li><a href="#">Bolsa de Empleo TIC UNA ↗</a></li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <!-- 5. Docentes y Admin -->
+                    <li class="mobile-menu-item">
+                        <button class="mobile-accordion-btn" aria-expanded="false">
+                            <span>Docentes y Admin</span>
+                            <svg class="mobile-chevron" viewBox="0 0 24 24" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </button>
+                        <div class="mobile-subpanel">
+                            <ul class="mobile-sublist">
+                                <li><a href="#">Trámites Internos</a></li>
+                                <li><a href="#">Desarrollo Docente y Perfiles</a></li>
+                                <li><a href="#">Guías, Plantillas e Instrumentos</a></li>
+                                <li><a href="#">Bolsa Docente ↗</a></li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <!-- 6. Documentos -->
+                    <li class="mobile-menu-item">
+                        <button class="mobile-accordion-btn" aria-expanded="false">
+                            <span>Documentos</span>
+                            <svg class="mobile-chevron" viewBox="0 0 24 24" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </button>
+                        <div class="mobile-subpanel">
+                            <ul class="mobile-sublist">
+                                <li><a href="#">Normas APA Institucional</a></li>
+                                <li><a href="#">Sesiones del CTFG</a></li>
+                                <li><a href="#">Actas de Consejo y Asamblea</a></li>
+                                <li><a href="#">Planes de Ingeniería 2024 / 2025</a></li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <!-- 7. Portal de Sistemas -->
+                    <li class="mobile-menu-item">
+                        <button class="mobile-accordion-btn" aria-expanded="false">
+                            <span>Portal de Sistemas</span>
+                            <svg class="mobile-chevron" viewBox="0 0 24 24" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </button>
+                        <div class="mobile-subpanel">
+                            <ul class="mobile-sublist">
+                                <li><a href="#">Matrícula en Línea ↗</a></li>
+                                <li><a href="#">Aula Virtual UNA ↗</a></li>
+                                <li><a href="#">SIDUNA - Sistema Integrado ↗</a></li>
+                                <li><a href="#">BANNER ↗</a></li>
+                                <li><a href="#">SIGESA / SIBEUNA ↗</a></li>
+                                <li><a href="#">Mesa de Ayuda Técnica TIC ↗</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- Pie del Drawer (Accesos Rápidos Institucionales) -->
+        <div class="drawer-footer">
+            <span class="drawer-footer-title">Accesos Rápidos Institucionales</span>
+            <div class="drawer-shortcuts-grid">
+                <a href="#" class="drawer-shortcut-btn">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                    Correo
+                </a>
+                <a href="#" class="drawer-shortcut-btn">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                    Aula Virtual
+                </a>
+                <a href="#" class="drawer-shortcut-btn">Directorio</a>
+                <a href="#" class="drawer-shortcut-btn">Sistemas</a>
+            </div>
+            <div class="drawer-campus-tag">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                Campus Benjamín Núñez • Lagunilla, Heredia
+            </div>
+        </div>
+    </aside>
 
     <main role="main">
         <!-- CAROUSEL (HERO INSTITUCIONAL) -->

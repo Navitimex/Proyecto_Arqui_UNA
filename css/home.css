@@ -479,15 +479,31 @@
 
 @media (max-width: 768px) {
     .carousel {
-        height: 440px;
+        height: auto;
+        min-height: 460px;
+        padding: 50px 0;
     }
 
     .slide-content h1 {
-        font-size: 32px;
+        font-size: 30px;
     }
 
     .slide-content p {
-        font-size: 15.5px;
+        font-size: 15px;
+        max-width: 540px;
+    }
+
+    .slide-cta-group {
+        flex-direction: column;
+        align-items: stretch;
+        max-width: 360px;
+        margin: 0 auto;
+    }
+
+    .btn-hero-primary,
+    .btn-hero-secondary {
+        justify-content: center;
+        text-align: center;
     }
 
     .features-section {
@@ -505,19 +521,26 @@
 
 @media (max-width: 480px) {
     .carousel {
-        height: 390px;
+        min-height: 420px;
+        padding: 40px 0;
     }
 
     .slide-content h1 {
-        font-size: 26px;
+        font-size: 24px;
+        line-height: 1.25;
     }
 
     .slide-content p {
-        display: none;
+        font-size: 14px;
+        margin-bottom: 20px;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
     }
 
     .hero-kicker {
-        font-size: 10.5px;
+        font-size: 11px;
         margin-bottom: 12px;
     }
 }
