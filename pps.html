@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Práctica Profesional Supervisada (PPS) - Escuela de Informática | UNA</title>
+    <meta name="description" content="Información oficial, requisitos, cronograma, plantillas y trámites de la Práctica Profesional Supervisada (PPS) de la Escuela de Informática, Universidad Nacional.">
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Estilos Modulares -->
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/pps.css">
+</head>
+
+<body>
+
+    <!-- HEADER / MENÚ PRINCIPAL (REUTILIZADO DE INDEX) -->
+    <header role="banner">
+        <div class="header-container">
+            <a href="index.html" class="logo" aria-label="Inicio Escuela de Informática UNA">
+                <span>UNA</span> ESCUELA
+            </a>
+            <nav aria-label="Navegación principal">
+                <ul>
+                    <li class="dropdown"><a href="#">La Escuela ▾</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Acerca de la Escuela</a></li>
+                            <li class="dropdown dropdown-submenu has-submenu"><a href="#">Sedes</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" class="ext-link">Sede Regional Occidente ↗</a></li>
+                                    <li><a href="#" class="ext-link">Campus Sarapiquí ↗</a></li>
+                                    <li><a href="#" class="ext-link">Campus Liberia ↗</a></li>
+                                    <li><a href="#" class="ext-link">Campus Nicoya ↗</a></li>
+                                    <li><a href="#" class="ext-link">Pérez Zeledón ↗</a></li>
+                                    <li><a href="#" class="ext-link">Coto ↗</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown dropdown-submenu has-submenu"><a href="#">Acreditación y Calidad</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Documentación Oficial</a></li>
+                                    <li><a href="#">Informes de Evaluación</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown dropdown-submenu has-submenu"><a href="#">Directorio Institucional</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" class="ext-link">Académicos y Administrativos ↗</a></li>
+                                    <li><a href="#" class="ext-link">Consultar Investigadores ↗</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#" class="ext-link">Normativa General ↗</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown"><a href="#">Oferta Académica ▾</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Diplomado</a></li>
+                            <li><a href="#">Bachillerato</a></li>
+                            <li><a href="#">Licenciatura</a></li>
+                            <li class="dropdown dropdown-submenu has-submenu"><a href="#">Posgrados</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" class="ext-link">MATI ↗</a></li>
+                                    <li><a href="#" class="ext-link">MATIE ↗</a></li>
+                                    <li><a href="#" class="ext-link">MAGIT ↗</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown"><a href="#">Investigación y Extensión ▾</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Líneas de Investigación</a></li>
+                            <li class="dropdown dropdown-submenu has-submenu"><a href="#">Proyectos y Actividades</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" class="ext-link">Consultar Proyectos ↗</a></li>
+                                    <li><a href="#" class="ext-link">Consultar Actividades ↗</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown dropdown-submenu has-submenu"><a href="#">Educación Continua</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" class="ext-link">Educación Continua ↗</a></li>
+                                    <li><a href="#" class="ext-link">ICAI ↗</a></li>
+                                    <li><a href="#" class="ext-link">CISCO ↗</a></li>
+                                    <li><a href="#" class="ext-link">La UNA te prepara ↗</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown dropdown-submenu has-submenu"><a href="#">Laboratorios y Centros</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" class="ext-link">Laboratorio Base de Datos ↗</a></li>
+                                    <li><a href="#" class="ext-link">Laboratorio de Imágenes ↗</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown"><a href="#" id="menu-estudiantes">Estudiantes y Egresados ▾</a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown dropdown-submenu has-submenu"><a href="#">Trámites Estudiantiles</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" class="ext-link">Carné Estudiantil ↗</a></li>
+                                    <li><a href="#" class="ext-link">Marchamo / Sobrepasos ↗</a></li>
+                                    <li><a href="#">Trámites Licenciatura</a></li>
+                                    <li><a href="#">Procedimientos y Banner</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown dropdown-submenu has-submenu">
+                                <a href="pps.html" class="highlight-link" id="link-pps-menu">Práctica Profesional (PPS)</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="pps.html">¿Qué es y Cómo prepararte?</a></li>
+                                    <li><a href="pps.html#documentacion">Documentación y Plantillas</a></li>
+                                    <li><a href="pps.html#faqs">Preguntas Frecuentes (FAQs)</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown dropdown-submenu has-submenu"><a href="#">Innovación y Emprendimiento</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Yo Creativ@ y App Créditos</a></li>
+                                    <li><a href="#" class="ext-link">eiEmprende / Expoempresa ↗</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown dropdown-submenu has-submenu"><a href="#">Egresados y Empleabilidad</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Actualización de Datos</a></li>
+                                    <li><a href="#" class="ext-link">Ver Ofertas de Empleo ↗</a></li>
+                                    <li><a href="#">Publicar Empleo</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown"><a href="#">Docentes y Admin ▾</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Trámites Internos</a></li>
+                            <li><a href="#">Desarrollo Docente y Perfiles</a></li>
+                            <li><a href="#">Guías, Plantillas e Instrumentos</a></li>
+                            <li><a href="#">Trabaje con nosotros</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown dropdown-right"><a href="#">Documentos ▾</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Normas APA</a></li>
+                            <li><a href="#">Sesiones CTFG</a></li>
+                            <li class="dropdown dropdown-submenu has-submenu"><a href="#">Actas Oficiales</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Consejo de Unidad</a></li>
+                                    <li><a href="#">Asamblea Académicos</a></li>
+                                    <li><a href="#">Asamblea de Unidad</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown dropdown-submenu has-submenu"><a href="#">Documentación Histórica</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Ingeniería 2024 / 2025</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown dropdown-right"><a href="#">Portal de Sistemas ▾</a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown dropdown-submenu has-submenu"><a href="#">Sistemas Académicos</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" class="ext-link">Matrícula ↗</a></li>
+                                    <li><a href="#" class="ext-link">Aula Virtual ↗</a></li>
+                                    <li><a href="#" class="ext-link">SIDUNA / Sistema Integrado ↗</a></li>
+                                    <li><a href="#" class="ext-link">BANNER ↗</a></li>
+                                    <li><a href="#" class="ext-link">Estadísticas Estudiantiles ↗</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown dropdown-submenu has-submenu"><a href="#">Gestión Admin y Docente</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" class="ext-link">SIGESA / SIBEUNA / AGDe ↗</a></li>
+                                    <li><a href="#" class="ext-link">Secretarial / Teletrabajo ↗</a></li>
+                                    <li><a href="#" class="ext-link">Horarios / Junta Becas ↗</a></li>
+                                    <li><a href="#" class="ext-link">Proceso Acreditación ↗</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown dropdown-submenu has-submenu"><a href="#">Herramientas y Software</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" class="ext-link">UNATUBE / Tu aprendizaje ↗</a></li>
+                                    <li><a href="#" class="ext-link">Mathematica / Discretas / CDF ↗</a></li>
+                                    <li><a href="#" class="ext-link">Unos y Ceros ↗</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown dropdown-submenu has-submenu"><a href="#">Servicios TIC</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#" class="ext-link">Correo Institucional ↗</a></li>
+                                    <li><a href="#" class="ext-link">Eduroam / Cambio de Clave ↗</a></li>
+                                    <li><a href="#" class="ext-link">Servicio Técnico ↗</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- BARRA DE MIGAS DE PAN (BREADCRUMBS) -->
+    <div class="breadcrumbs-bar">
+        <div class="breadcrumbs-container">
+            <nav aria-label="Migas de pan" class="breadcrumbs">
+                <a href="index.html" id="breadcrumb-home">Inicio</a>
+                <span class="sep">/</span>
+                <a href="#">Estudiantes y Egresados</a>
+                <span class="sep">/</span>
+                <span class="current" aria-current="page">Práctica Profesional (PPS)</span>
+            </nav>
+        </div>
+    </div>
+
+    <main role="main">
+        <!-- BLOQUE DE IDENTIDAD Y ACCIÓN PRINCIPAL (HERO DE TRÁMITE) -->
+        <section class="page-header" aria-labelledby="pps-title">
+            <div class="page-header-container">
+                <div class="badge-category">
+                    <span class="dot"></span> Trámite de Graduación Oficial
+                </div>
+                <h1 id="pps-title">Práctica Profesional Supervisada (PPS)</h1>
+                <p class="lead">
+                    Portal centralizado para la postulación, formalización y seguimiento del anteproyecto de graduación. Consulta los requisitos curriculares, fechas oficiales del Consejo Técnico de Facultad y Graduación (CTFG) y descarga las plantillas normadas.
+                </p>
+
+                <!-- Metadatos clave -->
+                <div class="meta-pills" role="region" aria-label="Metadatos del trámite">
+                    <div class="meta-pill">
+                        <span>📋</span> <span>Código: <strong>EIF-404</strong></span>
+                    </div>
+                    <div class="meta-pill">
+                        <span>⏱️</span> <span>Dedicación: <strong>320 Horas Mínimas</strong></span>
+                    </div>
+                    <div class="meta-pill">
+                        <span>🎯</span> <span>Requisito: <strong>≥ 80% Plan de Estudios</strong></span>
+                    </div>
+                    <div class="meta-pill">
+                        <span>📅</span> <span>Ciclo Lectivo: <strong>II Ciclo 2026</strong></span>
+                    </div>
+                    <div class="meta-pill">
+                        <span>🏢</span> <span>Modalidad: <strong>Híbrida / Presencial / Remota</strong></span>
+                    </div>
+                </div>
+
+                <!-- Botones de Acción Principal -->
+                <div class="header-actions">
+                    <a href="#descarga-anteproyecto" class="btn btn-primary" id="btn-download-primary">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="7 10 12 15 17 10"></polyline>
+                            <line x1="12" y1="15" x2="12" y2="3"></line>
+                        </svg>
+                        Descargar Plantilla Oficial de Anteproyecto (.docx)
+                    </a>
+                    <a href="#faqs" class="btn btn-outline-white" id="btn-view-faqs">
+                        Consultar Preguntas Frecuentes
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <div class="content-container">
+            <!-- PESTAÑAS DE CONTENIDO (TABS) -->
+            <section class="tabs-wrapper" aria-label="Información detallada de la PPS">
+                <div class="tabs-nav" role="tablist">
+                    <button class="tab-btn active" role="tab" aria-selected="true" aria-controls="panel-requisitos" id="tab-requisitos">
+                        <span class="tab-icon">📌</span> Requisitos y Modalidades
+                    </button>
+                    <button class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-cronograma" id="tab-cronograma">
+                        <span class="tab-icon">📅</span> Cronograma y Fechas Clave
+                    </button>
+                    <button class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-procedimiento" id="tab-procedimiento">
+                        <span class="tab-icon">🔄</span> Proceso de Postulación
+                    </button>
+                    <button class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-documentacion" id="tab-documentacion">
+                        <span class="tab-icon">📁</span> Documentación y Formatos
+                    </button>
+                </div>
+
+                <div class="tab-content">
+                    <!-- PANEL 1: REQUISITOS Y MODALIDADES -->
+                    <div class="tab-panel active" id="panel-requisitos" role="tabpanel" aria-labelledby="tab-requisitos">
+                        <h2>Requisitos Académicos y Condiciones de Ejecución</h2>
+                        <p class="tab-intro">
+                            La Práctica Profesional Supervisada es una experiencia integradora en un entorno laboral real regulada por la Escuela de Informática y las directrices institucionales de la UNA.
+                        </p>
+
+                        <div class="info-cards-grid">
+                            <article class="info-card">
+                                <h3>🎓 Requisitos del Estudiante</h3>
+                                <p>Para optar por la postulación del anteproyecto, el estudiante debe cumplir estrictamente con:</p>
+                                <ul>
+                                    <li>Haber aprobado al menos el <strong>80% del plan de estudios</strong> de la carrera.</li>
+                                    <li>Tener condición académica regular y matrícula activa.</li>
+                                    <li>No tener pendientes disciplinarios ni deudas arancelarias.</li>
+                                    <li>Asistir a la sesión de inducción obligatoria de la coordinación de PPS.</li>
+                                </ul>
+                            </article>
+
+                            <article class="info-card accent-border">
+                                <h3>🏢 Requisitos de la Empresa Receptora</h3>
+                                <p>La organización donde se ejecute la práctica debe certificar las siguientes garantías:</p>
+                                <ul>
+                                    <li>Personería jurídica vigente nacional o internacional.</li>
+                                    <li>Designación de un <strong>Supervisor Empresarial</strong> con titulación mínima de Bachillerato en Computación/Sistemas o campo afín.</li>
+                                    <li>Compromiso formal mediante la firma de la <em>Carta de Compromiso</em>.</li>
+                                    <li>Facilitar herramientas de desarrollo y acceso seguro a los entornos de trabajo.</li>
+                                </ul>
+                            </article>
+
+                            <article class="info-card">
+                                <h3>💻 Modalidades de Ejecución</h3>
+                                <p>El modelo pedagógico de la Escuela autoriza tres esquemas de cumplimiento de las 320 horas:</p>
+                                <ul>
+                                    <li><strong>Presencial:</strong> Cumplimiento total de horas en las oficinas de la empresa.</li>
+                                    <li><strong>Híbrida:</strong> Combinación concertada de teletrabajo y asistencia in situ.</li>
+                                    <li><strong>Remota (Teletrabajo):</strong> 100% virtual, sujeta a supervisión semanal y bitácoras auditables.</li>
+                                </ul>
+                            </article>
+                        </div>
+                    </div>
+
+                    <!-- PANEL 2: CRONOGRAMA Y FECHAS CLAVE -->
+                    <div class="tab-panel" id="panel-cronograma" role="tabpanel" aria-labelledby="tab-cronograma">
+                        <h2>Cronograma Oficial del Ciclo Lectivo 2026</h2>
+                        <p class="tab-intro">
+                            Fechas perentorias aprobadas por el Consejo Técnico de Facultad y Graduación (CTFG) para la recepción, revisión y evaluación de la PPS.
+                        </p>
+
+                        <div class="timeline-table-wrapper">
+                            <table class="timeline-table">
+                                <thead>
+                                    <tr>
+                                        <th>Hito del Proceso</th>
+                                        <th>Período Oficial</th>
+                                        <th>Responsable</th>
+                                        <th>Estado Actual</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>Recepción de Anteproyectos (Convocatoria Regular)</strong></td>
+                                        <td>01 Ago - 22 Ago 2026</td>
+                                        <td>Estudiante</td>
+                                        <td><span class="status-badge status-open">En Convocatoria</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Sesión Extraordinaria de Aprobación CTFG</strong></td>
+                                        <td>26 Ago - 30 Ago 2026</td>
+                                        <td>Consejo de Escuela</td>
+                                        <td><span class="status-badge status-upcoming">Próximamente</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Formalización de Matrícula y Asignación de Tutor</strong></td>
+                                        <td>02 Sep - 06 Sep 2026</td>
+                                        <td>Registro y Coordinación</td>
+                                        <td><span class="status-badge status-upcoming">Próximamente</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Entrega de Primer Informe de Avance (35%)</strong></td>
+                                        <td>15 Oct 2026</td>
+                                        <td>Estudiante y Tutor</td>
+                                        <td><span class="status-badge status-upcoming">Programado</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Entrega Final de Informe y Defensa Oral</strong></td>
+                                        <td>20 Nov - 28 Nov 2026</td>
+                                        <td>Tribunal Evaluador</td>
+                                        <td><span class="status-badge status-upcoming">Programado</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- PANEL 3: PROCEDIMIENTO PASO A PASO -->
+                    <div class="tab-panel" id="panel-procedimiento" role="tabpanel" aria-labelledby="tab-procedimiento">
+                        <h2>Guía de Postulación en 4 Pasos</h2>
+                        <p class="tab-intro">
+                            Sigue esta secuencia para asegurar que tu solicitud sea admitida sin prevenciones ni rechazos administrativos.
+                        </p>
+
+                        <div class="steps-container">
+                            <div class="step-card">
+                                <div class="step-number">1</div>
+                                <div class="step-body">
+                                    <h3>Validación de Créditos y Elegibilidad</h3>
+                                    <p>Ingresa al portal de BANNER y descarga tu historial académico no oficial para constatar que posees al menos el 80% de créditos aprobados de la carrera.</p>
+                                    <span class="step-meta">Plazo: Previo al inicio de recepción de solicitudes</span>
+                                </div>
+                            </div>
+
+                            <div class="step-card">
+                                <div class="step-number">2</div>
+                                <div class="step-body">
+                                    <h3>Acuerdo con la Empresa y Carta de Compromiso</h3>
+                                    <p>Establece con la empresa el alcance del proyecto técnico y obtén la firma del representante legal en la <em>Carta Oficial de Compromiso</em>.</p>
+                                    <span class="step-meta">Requisito obligatorio para adjuntar al anteproyecto</span>
+                                </div>
+                            </div>
+
+                            <div class="step-card">
+                                <div class="step-number">3</div>
+                                <div class="step-body">
+                                    <h3>Elaboración y Radicación del Anteproyecto</h3>
+                                    <p>Completa la plantilla institucional en formato Word respetando las normas APA y envíala a través del formulario digital del CTFG antes de la fecha límite.</p>
+                                    <span class="step-meta">Revisión técnica por el Consejo: 5 días hábiles</span>
+                                </div>
+                            </div>
+
+                            <div class="step-card">
+                                <div class="step-number">4</div>
+                                <div class="step-body">
+                                    <h3>Matrícula Oficial y Asignación de Profesor Tutor</h3>
+                                    <p>Una vez aprobado el dictamen favorable del CTFG, procede con la matrícula del curso en el sistema y coordina la primera reunión con tu tutor académico.</p>
+                                    <span class="step-meta">Inicio formal del cómputo de las 320 horas</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PANEL 4: DOCUMENTACIÓN Y FORMATOS -->
+                    <div class="tab-panel" id="panel-documentacion" role="tabpanel" aria-labelledby="tab-documentacion">
+                        <h2 id="documentacion">Plantillas Oficiales y Recursos Descargables</h2>
+                        <p class="tab-intro">
+                            Descarga los formatos vigentes para el ciclo 2026. Todos los documentos deben presentarse sin alteraciones en la estructura institucional.
+                        </p>
+
+                        <div class="downloads-grid">
+                            <!-- Recurso 1: Anteproyecto -->
+                            <div class="download-item">
+                                <div class="download-info">
+                                    <div class="download-icon icon-word" aria-hidden="true">📄</div>
+                                    <div>
+                                        <h3 class="download-title">Plantilla de Anteproyecto (.docx)</h3>
+                                        <p class="download-desc">Formato oficial normado para formular el problema, objetivos, justificación y metodología técnica.</p>
+                                    </div>
+                                </div>
+                                <button class="btn-download-action download-trigger" data-file="Plantilla_Oficial_Anteproyecto_PPS_2026.docx">
+                                    Descargar Documento (.docx) ↓
+                                </button>
+                            </div>
+
+                            <!-- Recurso 2: Carta Empresa -->
+                            <div class="download-item">
+                                <div class="download-info">
+                                    <div class="download-icon icon-word" aria-hidden="true">🏢</div>
+                                    <div>
+                                        <h3 class="download-title">Carta Compromiso de la Empresa</h3>
+                                        <p class="download-desc">Modelo legal para la firma de la empresa receptora con declaración de confidencialidad y supervisión.</p>
+                                    </div>
+                                </div>
+                                <button class="btn-download-action download-trigger" data-file="Carta_Compromiso_Empresarial_PPS_UNA.docx">
+                                    Descargar Modelo (.docx) ↓
+                                </button>
+                            </div>
+
+                            <!-- Recurso 3: Bitácora -->
+                            <div class="download-item">
+                                <div class="download-info">
+                                    <div class="download-icon icon-excel" aria-hidden="true">📊</div>
+                                    <div>
+                                        <h3 class="download-title">Bitácora Semanal de Horas (.xlsx)</h3>
+                                        <p class="download-desc">Planilla automatizada en Excel para el registro semanal de tareas con firmas de validación técnica.</p>
+                                    </div>
+                                </div>
+                                <button class="btn-download-action download-trigger" data-file="Bitacora_Semanal_Control_Horas_PPS.xlsx">
+                                    Descargar Planilla (.xlsx) ↓
+                                </button>
+                            </div>
+
+                            <!-- Recurso 4: Guía Informe Final -->
+                            <div class="download-item">
+                                <div class="download-info">
+                                    <div class="download-icon icon-pdf" aria-hidden="true">📑</div>
+                                    <div>
+                                        <h3 class="download-title">Guía de Redacción de Informe Final</h3>
+                                        <p class="download-desc">Instrucciones formales sobre tipografía, estructura de capítulos y rúbrica de evaluación del tribunal.</p>
+                                    </div>
+                                </div>
+                                <button class="btn-download-action download-trigger" data-file="Guia_Estructura_Informe_Final_PPS.pdf">
+                                    Descargar Guía (.pdf) ↓
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ACORDEÓN EXPANSIBLE DE PREGUNTAS FRECUENTES (FAQS) -->
+            <section class="faq-section" id="faqs" aria-labelledby="faq-title">
+                <header class="faq-header">
+                    <div>
+                        <h2 id="faq-title">Preguntas Frecuentes (FAQs)</h2>
+                        <p>Respuestas claras a las dudas más comunes sobre la Práctica Profesional Supervisada.</p>
+                    </div>
+                    <button type="button" class="btn btn-outline-white" id="toggle-all-faqs" style="color: var(--primary); border-color: var(--border); font-size: 13px; padding: 8px 16px;">
+                        Expandir Todas
+                    </button>
+                </header>
+
+                <div class="accordion-list">
+                    <!-- FAQ 1 -->
+                    <div class="accordion-item">
+                        <button class="accordion-header" aria-expanded="false" aria-controls="faq-ans-1" id="faq-q-1">
+                            <span>¿Puedo realizar la Práctica Profesional en la misma empresa donde ya trabajo actualmente?</span>
+                            <span class="accordion-icon" aria-hidden="true">+</span>
+                        </button>
+                        <div class="accordion-body" id="faq-ans-1" role="region" aria-labelledby="faq-q-1">
+                            <p><strong>Sí, bajo condiciones específicas.</strong> El proyecto propuesto para la PPS debe ser diferente e innovador respecto a tus funciones laborales habituales cotidianas, requiriendo un supervisor directo distinto al jefe inmediato habitual y contando con el aval expreso del CTFG.</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 2 -->
+                    <div class="accordion-item">
+                        <button class="accordion-header" aria-expanded="false" aria-controls="faq-ans-2" id="faq-q-2">
+                            <span>¿Es posible realizar la PPS de manera remota con una empresa ubicada en el extranjero?</span>
+                            <span class="accordion-icon" aria-hidden="true">+</span>
+                        </button>
+                        <div class="accordion-body" id="faq-ans-2" role="region" aria-labelledby="faq-q-2">
+                            <p><strong>Sí está permitido.</strong> La empresa extranjera debe presentar su equivalente de registro mercantil legal y el supervisor asignado debe tener disponibilidad de comunicarse quincenalmente en español o inglés con el tutor académico de la UNA a través de medios virtuales.</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 3 -->
+                    <div class="accordion-item">
+                        <button class="accordion-header" aria-expanded="false" aria-controls="faq-ans-3" id="faq-q-3">
+                            <span>¿Qué sucede si el CTFG emite observaciones o rechaza el anteproyecto inicial?</span>
+                            <span class="accordion-icon" aria-hidden="true">+</span>
+                        </button>
+                        <div class="accordion-body" id="faq-ans-3" role="region" aria-labelledby="faq-q-3">
+                            <p>Si el dictamen es <em>Aprobado con Modificaciones</em>, el estudiante cuenta con un plazo máximo de <strong>10 días hábiles</strong> para subsanar los puntos señalados por la comisión revisora y remitir la versión corregida sin perder la ventana del ciclo lectivo.</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 4 -->
+                    <div class="accordion-item">
+                        <button class="accordion-header" aria-expanded="false" aria-controls="faq-ans-4" id="faq-q-4">
+                            <span>¿Cómo se computan y distribuyen las 320 horas reglamentarias de la práctica?</span>
+                            <span class="accordion-icon" aria-hidden="true">+</span>
+                        </button>
+                        <div class="accordion-body" id="faq-ans-4" role="region" aria-labelledby="faq-q-4">
+                            <p>Las 320 horas se distribuyen habitualmente a lo largo de 8 a 16 semanas lectivas (promedio de 20 a 40 horas por semana según si es a medio tiempo o tiempo completo). Todas las horas deben registrarse fielmente en la bitácora semanal y contar con el visto bueno del supervisor empresarial.</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 5 -->
+                    <div class="accordion-item">
+                        <button class="accordion-header" aria-expanded="false" aria-controls="faq-ans-5" id="faq-q-5">
+                            <span>¿Quién evalúa mi desempeño y cuál es la nota mínima de aprobación?</span>
+                            <span class="accordion-icon" aria-hidden="true">+</span>
+                        </button>
+                        <div class="accordion-body" id="faq-ans-5" role="region" aria-labelledby="faq-q-5">
+                            <p>La calificación se compone de tres partes: evaluación del <strong>Supervisor de la Empresa (30%)</strong>, evaluación continua del <strong>Profesor Tutor (40%)</strong> y evaluación del <strong>Tribunal en la Defensa Oral Final (30%)</strong>. La nota mínima para aprobar según el reglamento de régimen académico de la UNA es de <strong>7.0 / 10</strong>.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CAJA DE ASISTENCIA Y CONTACTO DIRECTO -->
+            <section class="help-box" aria-label="Canal de asistencia para trámites">
+                <div class="help-box-content">
+                    <h3>¿Tienes dudas adicionales o una situación particular?</h3>
+                    <p>La Coordinación de Prácticas y Graduaciones de la Escuela de Informática ofrece atención personalizada tanto presencial en el Campus Omar Dengo como por canales virtuales.</p>
+                </div>
+                <a href="https://wa.me/50622773000?text=Hola,%20tengo%20consultas%20específicas%20sobre%20el%20trámite%20de%20la%20PPS" 
+                   target="_blank" 
+                   rel="noopener noreferrer" 
+                   class="btn btn-primary" 
+                   style="background-color: var(--primary);">
+                    Contactar Coordinación
+                </a>
+            </section>
+        </div>
+    </main>
+
+    <!-- FOOTER (REUTILIZADO DE INDEX) -->
+    <footer role="contentinfo">
+        <div class="footer-container">
+            <section class="footer-col" aria-label="Contacto Institucional">
+                <h4>Contacto Institucional</h4>
+                <ul>
+                    <li><a href="tel:50622773000">Tel: (506) 2277-3000</a></li>
+                    <li><a href="#">Campus Omar Dengo, Heredia</a></li>
+                    <li><a href="#">Soporte Técnico TIC</a></li>
+                </ul>
+            </section>
+            <section class="footer-col" aria-label="Accesos Rápidos">
+                <h4>Accesos Rápidos</h4>
+                <ul>
+                    <li><a href="pps.html">Práctica Profesional (PPS)</a></li>
+                    <li><a href="#">Estudiantes y Matrícula</a></li>
+                    <li><a href="#">Docentes y Administrativos</a></li>
+                    <li><a href="#">Educación Continua</a></li>
+                </ul>
+            </section>
+            <section class="footer-col" aria-label="Redes Sociales">
+                <h4>Redes Sociales</h4>
+                <ul>
+                    <li><a href="#" class="ext-link">Facebook ↗</a></li>
+                    <li><a href="#" class="ext-link">Instagram ↗</a></li>
+                    <li><a href="#" class="ext-link">YouTube ↗</a></li>
+                    <li><a href="#" class="ext-link">LinkedIn (Exalumnos) ↗</a></li>
+                </ul>
+            </section>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Universidad Nacional de Costa Rica. Prototipo de Arquitectura UI/UX - Escuela de Informática.</p>
+        </div>
+    </footer>
+
+    <!-- BOTÓN FLOTANTE FIJO DE WHATSAPP -->
+    <a href="https://wa.me/50622773000?text=Hola,%20solicito%20información%20sobre%20la%20Práctica%20Profesional%20Supervisada%20(PPS)" 
+       class="whatsapp-float" 
+       id="whatsapp-btn"
+       target="_blank" 
+       rel="noopener noreferrer" 
+       aria-label="Atención al Estudiante vía WhatsApp">
+        <span class="whatsapp-tooltip">Atención estudiantil por WhatsApp</span>
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+        </svg>
+    </a>
+
+    <!-- NOTIFICACIÓN TOAST PARA DESCARGA -->
+    <div id="toast-notify" class="toast-notify" role="alert" aria-live="polite">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#34D399" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+        </svg>
+        <span id="toast-text">Descargando plantilla oficial...</span>
+    </div>
+
+    <!-- Scripts Modulares -->
+    <script src="js/pps.js"></script>
+</body>
+
+</html>

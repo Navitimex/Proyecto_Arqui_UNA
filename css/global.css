@@ -1,0 +1,369 @@
+/* ==========================================================================
+   ARQUITECTURA DE INFORMACIÓN - ESCUELA DE INFORMÁTICA (UNA)
+   ESTILOS GLOBALES (css/global.css)
+   ========================================================================== */
+
+/* === RESET Y TIPOGRAFÍA BASE === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+:root {
+    --primary: #26215C;          /* Azul Institucional UNA */
+    --secondary: #534AB7;        /* Azul Claro / Acento Digital */
+    --accent: #A32D2D;           /* Rojo UNA */
+    --accent-soft: #FDE8E8;      /* Fondo tenue rojo */
+    --bg-light: #F8F9FA;
+    --text-main: #2C2C2A;
+    --text-muted: #5F5E5A;
+    --white: #FFFFFF;
+    --border: #E5E7EB;
+    --border-hover: #D1D5DB;
+    --whatsapp-green: #25D366;
+    --whatsapp-green-hover: #20BA56;
+    --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    --card-shadow-hover: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* === STICKY FOOTER === */
+body {
+    background-color: var(--bg-light);
+    color: var(--text-main);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}
+
+/* === HEADER Y MENÚ PRINCIPAL === */
+header {
+    background-color: var(--white);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 3px solid var(--accent);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: 900;
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    flex-shrink: 0;
+    margin-right: 20px;
+}
+
+.logo span {
+    color: var(--accent);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav > ul > li > a {
+    color: var(--text-main);
+    text-decoration: none;
+    padding: 28px 12px;
+    display: block;
+    font-weight: 600;
+    font-size: 13px;
+    transition: color 0.3s;
+}
+
+nav > ul > li:hover > a {
+    color: var(--secondary);
+}
+
+/* === DROPDOWNS MULTINIVEL === */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--white);
+    min-width: 290px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    border-radius: 0 0 8px 8px;
+    overflow: visible;
+    border: 1px solid var(--border);
+    border-top: none;
+}
+
+.dropdown:hover > .dropdown-menu {
+    display: block;
+    animation: fadeIn 0.2s ease-in-out;
+}
+
+.dropdown-menu li {
+    border-bottom: 1px solid var(--bg-light);
+    position: relative;
+}
+
+.dropdown-menu li:last-child {
+    border-bottom: none;
+}
+
+.dropdown-menu li a {
+    color: var(--text-main);
+    padding: 14px 20px;
+    display: block;
+    text-decoration: none;
+    font-size: 13.5px;
+    transition: all 0.2s;
+}
+
+.dropdown-menu li a:hover {
+    background-color: var(--bg-light);
+    color: var(--secondary);
+    padding-left: 26px;
+}
+
+.dropdown-submenu > .dropdown-menu {
+    top: 0;
+    left: 100%;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    margin-left: -2px;
+}
+
+.has-submenu > a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.has-submenu > a::after {
+    content: '▸';
+    font-size: 16px;
+    color: #999;
+    margin-left: 10px;
+}
+
+.has-submenu:hover > a::after {
+    color: var(--secondary);
+}
+
+.dropdown-right .dropdown-submenu > .dropdown-menu {
+    left: auto;
+    right: 100%;
+    margin-right: -2px;
+}
+
+.ext-link {
+    color: #185FA5 !important;
+}
+
+.highlight-link {
+    font-weight: 700 !important;
+    color: var(--primary) !important;
+    border-left: 3px solid var(--accent);
+    background-color: rgba(163, 45, 45, 0.04);
+}
+
+/* === FOOTER === */
+footer {
+    background-color: var(--primary);
+    color: var(--white);
+    padding: 60px 20px 20px 20px;
+    margin-top: auto;
+}
+
+.footer-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 40px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 40px;
+    margin-bottom: 20px;
+}
+
+.footer-col h4 {
+    color: var(--white);
+    font-size: 15px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-left: 3px solid var(--accent);
+    padding-left: 8px;
+}
+
+.footer-col ul {
+    list-style: none;
+}
+
+.footer-col ul li {
+    margin-bottom: 12px;
+}
+
+.footer-col ul li a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.footer-col ul li a:hover {
+    color: var(--white);
+    padding-left: 4px;
+}
+
+.footer-bottom {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 13px;
+}
+
+/* === BOTÓN FLOTANTE FIJO DE WHATSAPP === */
+.whatsapp-float {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background-color: var(--whatsapp-green);
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+    z-index: 9999;
+    text-decoration: none;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), background-color 0.2s, box-shadow 0.3s;
+}
+
+.whatsapp-float:hover {
+    background-color: var(--whatsapp-green-hover);
+    transform: scale(1.1);
+    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.6);
+}
+
+.whatsapp-float svg {
+    width: 32px;
+    height: 32px;
+    fill: white;
+}
+
+.whatsapp-tooltip {
+    position: absolute;
+    right: 70px;
+    background-color: #1F2937;
+    color: white;
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 500;
+    white-space: nowrap;
+    pointer-events: none;
+    opacity: 0;
+    transform: translateX(10px);
+    transition: opacity 0.3s, transform 0.3s;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.whatsapp-float:hover .whatsapp-tooltip {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* === ANIMACIONES COMPARTIDAS === */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(5px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* === MEDIA QUERIES GENERALES (HEADER / NAV) === */
+@media (max-width: 1200px) {
+    nav > ul > li > a {
+        padding: 24px 8px;
+        font-size: 12.5px;
+    }
+}
+
+@media (max-width: 992px) {
+    .header-container {
+        flex-wrap: wrap;
+        padding: 12px 15px;
+    }
+
+    .logo {
+        margin-bottom: 8px;
+    }
+
+    nav {
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    nav ul {
+        white-space: nowrap;
+        display: flex;
+    }
+
+    nav > ul > li > a {
+        padding: 12px 14px;
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 600px) {
+    .whatsapp-float {
+        bottom: 18px;
+        right: 18px;
+        width: 52px;
+        height: 52px;
+    }
+
+    .whatsapp-float svg {
+        width: 28px;
+        height: 28px;
+    }
+}
