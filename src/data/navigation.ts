@@ -1,3 +1,9 @@
+/**
+ * PROYECTO ACADÉMICO / FINES ESTUDIANTILES
+ * Curso: EIF-511 Arquitectura de Información - UNA
+ * Fuente única de verdad del árbol de navegación para prototipo de evaluación.
+ */
+
 export interface SubItem {
   title: string;
   href: string;

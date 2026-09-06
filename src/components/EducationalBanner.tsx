@@ -1,3 +1,9 @@
+/**
+ * PROYECTO ACADÉMICO / FINES ESTUDIANTILES
+ * Curso: EIF-511 Arquitectura de Información - UNA
+ * Franja superior de advertencia explícita de proyecto no oficial.
+ */
+
 import React from "react";
 import { AlertTriangle } from "lucide-react";
 

@@ -1,3 +1,9 @@
+/**
+ * PROYECTO ACADÉMICO / FINES ESTUDIANTILES
+ * Curso: EIF-511 Arquitectura de Información - UNA
+ * Plantilla institucional unificada para las 26 páginas del sitemap de la Escuela de Informática.
+ */
+
 "use client";
 
 import React from "react";

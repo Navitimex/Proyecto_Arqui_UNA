@@ -1,3 +1,9 @@
+/**
+ * PROYECTO ACADÉMICO / FINES ESTUDIANTILES (EIF-511 Arquitectura de Información)
+ * Orquestador cliente de layout: Banner educativo, Header, Drawer, Contenido y Footer.
+ * Aviso: Prototipo no oficial de la Universidad Nacional de Costa Rica.
+ */
+
 "use client";
 
 import React, { useState } from "react";

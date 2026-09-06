@@ -1,3 +1,9 @@
+/**
+ * PROYECTO ACADÉMICO / FINES ESTUDIANTILES
+ * Curso: EIF-511 Arquitectura de Información - Universidad Nacional (UNA)
+ * Footer institucional depurado con aviso explícito de proyecto formativo.
+ */
+
 import React from "react";
 import Link from "next/link";
 import { ShieldCheck, MapPin, Mail, Phone } from "lucide-react";

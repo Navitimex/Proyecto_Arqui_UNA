@@ -1,3 +1,9 @@
+/**
+ * PROYECTO ACADÉMICO CON FINES ESTUDIANTILES
+ * Curso: EIF-511 Arquitectura de Información - Universidad Nacional (UNA)
+ * Página Principal (Home): Prototipo no oficial de la Escuela de Informática
+ */
+
 "use client";
 
 import React, { useState } from "react";

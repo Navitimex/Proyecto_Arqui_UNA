@@ -1,3 +1,9 @@
+/**
+ * PROYECTO ACADÉMICO / FINES ESTUDIANTILES
+ * Curso: EIF-511 Arquitectura de Información - Universidad Nacional (UNA)
+ * Componente Header: Megamenú de 4 pilares + Portal TIC para prototipo evaluativo.
+ */
+
 "use client";
 
 import React, { useState, useRef, useEffect, useCallback } from "react";

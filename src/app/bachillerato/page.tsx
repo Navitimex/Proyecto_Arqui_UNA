@@ -1,3 +1,9 @@
+/**
+ * PROYECTO ACADÉMICO / FINES ESTUDIANTILES
+ * Curso: EIF-511 Arquitectura de Información - Universidad Nacional (UNA)
+ * Página de Bachillerato en Ingeniería en Sistemas: Malla Curricular y Ficha Técnica.
+ */
+
 "use client";
 
 import React, { useState, useMemo } from "react";
