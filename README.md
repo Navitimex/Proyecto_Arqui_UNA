@@ -1,8 +1,8 @@
-# Prototipo de Arquitectura de Información - Escuela de Informática (UNA)
+# Portal Web Institucional - Escuela de Informática (UNA)
 
-Prototipo interactivo de alta fidelidad desarrollado para visualizar la nueva **Arquitectura de Información (IA)** del portal de la Escuela de Informática de la Universidad Nacional de Costa Rica (UNA).
+Prototipo interactivo de alta fidelidad desarrollado para visualizar y validar la nueva **Arquitectura de Información (IA)** del portal de la Escuela de Informática de la Universidad Nacional de Costa Rica (UNA), fundamentada en el patrón internacional **"4 Pilares + 1 Botón de Acción Funcional"**.
 
-Construido con **HTML5 semántico**, **CSS3 puro** (diseño modular y responsivo) y **JavaScript nativo (Vanilla JS)**, sin dependencias ni frameworks pesados.
+Construido con **Next.js 14 (App Router)**, **TypeScript**, **Tailwind CSS** y componentes accesibles e interactivos.
 
 ---
 
@@ -11,64 +11,93 @@ Construido con **HTML5 semántico**, **CSS3 puro** (diseño modular y responsivo
 ```plaintext
 c:/Code Projects/UNA/
 │
-├── index.html              # Página Principal (Home) con carrusel institucional y accesos
-├── pps.html                # Página de Trámite: Práctica Profesional Supervisada (PPS)
-├── README.md               # Documentación y guía del proyecto
+├── src/
+│   ├── app/                    # Rutas y páginas del App Router
+│   │   ├── layout.tsx          # Layout raíz institucional con fuentes Inter y Roboto
+│   │   ├── client-layout.tsx   # Orquestador cliente de navegación, drawer y toast
+│   │   ├── globals.css         # Estilos globales y directivas de Tailwind CSS
+│   │   ├── page.tsx            # Portada Principal (Hero, Métricas, Accesos Rápidos, Noticias)
+│   │   ├── bachillerato/       # Tarea 1 Card Sorting: Malla Curricular y Ficha Técnica
+│   │   ├── pps/                # Tarea 2 Card Sorting: Formulario F-01 y Trámites de PPS
+│   │   └── servicios-tic/      # Tarea 3 Card Sorting: Centro de Servicios TIC y Mesa de Ayuda
+│   │
+│   ├── components/             # Componentes UI modulares y reutilizables
+│   │   ├── Header.tsx          # Cabecera institucional con megamenú accesible y Portal TIC
+│   │   ├── EducationalBanner.tsx # Franja superior de advertencia de proyecto académico
+│   │   ├── PageTemplate.tsx    # Plantilla institucional unificada para páginas de contenido
+│   │   ├── MobileDrawer.tsx    # Menú lateral off-canvas responsivo con acordeones
+│   │   ├── Footer.tsx          # Pie de página institucional limpio de 2 filas
+│   │   ├── Toast.tsx           # Notificaciones emergentes universales (descargas y acciones)
+│   │   └── WhatsAppFloat.tsx   # Botón flotante accesible de soporte vía WhatsApp
+│   │
+│   └── data/
+│       └── navigation.ts       # Fuente única de verdad del árbol de navegación y servicios TIC
 │
-├── css/                    # Hojas de estilo modulares
-│   ├── global.css          # Variables de diseño, tipografía Inter, Header, Dropdowns y Footer
-│   ├── home.css            # Estilos específicos de la Home (Carrusel, Rejilla de Novedades)
-│   └── pps.css             # Estilos de PPS (Tabs, Acordeón FAQ, Breadcrumbs, Metadatos)
+├── public/
+│   └── images/                 # Fotografías institucionales, logotipo heráldico y activos locales
 │
-├── js/                     # Lógica interactiva en Vanilla JS
-│   ├── main.js             # Controlador del carrusel y transiciones del Home
-│   └── pps.js              # Controlador de pestañas (Tabs), acordeón (FAQs) y descargas
-│
-├── docs/                   # Documentación oficial del proyecto
-│   ├── Entregable 1  .docx # Especificación de arquitectura, arquetipos y sitemap
+├── docs/                       # Especificaciones académicas del curso EIF-511
+│   ├── GUIA_ARQUITECTURA_Y_PAGINAS.md # Guía completa de arquitectura, Card Sorting y plantillas
+│   ├── Entregable 1  .pdf      # Especificación de arquitectura, arquetipos y OptimalSort
 │   └── Instrucciones del proyecto.pdf
 │
-└── legacy/                 # Archivos históricos de referencia
-    └── Propuesta HTML.html # Prototipo inicial previo a la refactorización semántica
+├── package.json                # Dependencias (Next.js, React, Tailwind CSS, Lucide React)
+├── tailwind.config.ts          # Configuración de diseño institucional UNA (colores, sombras, fuentes)
+└── tsconfig.json               # Configuración estricta de TypeScript
 ```
 
 ---
 
-## 🚀 Cómo Visualizar el Prototipo
+## 🚀 Cómo Ejecutar el Proyecto
 
-### Opción 1: Apertura Directa en el Navegador
-Puedes abrir directamente el archivo `index.html` en cualquier navegador moderno (Chrome, Edge, Firefox, Safari) haciendo doble clic sobre el archivo.
+### Requisitos
+- Node.js 18.x o superior
+- npm 9.x o superior
 
-### Opción 2: Servidor Local (Recomendado)
-Para emular una experiencia de despliegue web real:
-
+### Instalación e Inicio
 ```bash
-# Con Python 3
-python -m http.server 8000 --bind 127.0.0.1
+# 1. Instalar dependencias (si no están instaladas)
+npm install
 
-# Abrir en el navegador:
-http://127.0.0.1:8000/index.html
+# 2. Iniciar el servidor de desarrollo
+npm run dev
+
+# 3. Abrir en el navegador:
+http://localhost:3000/
+```
+
+### Build para Producción
+```bash
+npm run build
+npm run start
 ```
 
 ---
 
-## 🌟 Características Implementadas
+## 🎯 Validación de Tareas de Card Sorting
 
-1. **Refactorización Semántica HTML5:**
-   - Sustitución de `<div>` genéricos por `<header role="banner">`, `<main role="main">`, `<section>`, `<article>`, `<time>` y `<footer role="contentinfo">`.
-   - Cumplimiento de directrices de accesibilidad web (ARIA labels, estados `aria-expanded` y `aria-selected`).
+El prototipo cuenta con la totalidad de páginas evaluadas en el **Card Sorting Cerrado (OptimalSort)** del proyecto:
 
-2. **Navegación Local Bidireccional:**
-   - Menús desplegables multinivel accesibles al pasar el cursor.
-   - Conexión directa entre el Home e información de trámites (`pps.html`).
-   - Botón flotante institucional de atención al estudiante vía **WhatsApp** en ambas vistas.
+1. **Tarea 1 — Plan de Estudios del Bachillerato en Sistemas (`/bachillerato`):**
+   - **Ruta validada:** `Inicio > Oferta Académica > Bachillerato en Ingeniería en Sistemas`.
+   - **Métricas:** 100% de éxito, 9.2s tiempo medio, 95% ruta directa.
+   - **Funcionalidades:** Malla curricular interactiva con filtros por año (Ciclos I al VIII), prerrequisitos, créditos y descarga simulada del plan oficial en PDF.
 
-3. **Página de Trámite de PPS:**
-   - Migas de pan de navegación (*Breadcrumbs*).
-   - Metadatos clave del trámite: código curricular, créditos exigidos (≥ 80%), dedicación (320 horas) y ciclo activo.
-   - Sistema interactivo de 4 pestañas: *Requisitos y Modalidades*, *Cronograma CTFG 2026*, *Proceso de Postulación (Paso a Paso)* y *Documentación y Formatos*.
-   - Acordeón expansible de preguntas frecuentes con animación fluida y botón "Expandir / Contraer Todas".
-   - Descarga interactiva de plantillas oficiales con notificación *Toast*.
+2. **Tarea 2 — Formulario de Aprobación de la PPS (`/pps`):**
+   - **Ruta validada:** `Inicio > Comunidad > Estudiantes y Egresados > PPS`.
+   - **Métricas:** 90% de éxito, 13.5s tiempo medio, 85% ruta directa.
+   - **Funcionalidades:** Acceso directo en el Hero al **Formulario F-01 (F-PPS-01)**, pestañas de requisitos, cronograma CTFG y acordeón interactivo de FAQs.
 
-4. **Diseño Responsivo:**
-   - Adaptabilidad fluida para pantallas de escritorio, tabletas y teléfonos inteligentes (probado en 390x844).
+3. **Tarea 3 — Soporte Técnico y Cambio de Contraseña de Correo (`/servicios-tic`):**
+   - **Ruta validada:** Botón destacado `[ Portal TIC ▾ ] > Servicios TIC`.
+   - **Métricas:** 85% de éxito por ruta directa en Portal de Sistemas.
+   - **Funcionalidades:** Módulo interactivo de autoservicio para cambio de clave institucional y generador dinámico de tickets de soporte (`TIC-2026-XXXX`).
+
+---
+
+## 🏛️ Sistema de Diseño Institucional
+
+- **4 Pilares + 1 Botón de Acción Funcional:** Arquitectura depurada inspirada en referentes mundiales (MIT, Stanford, Harvard, UNA/UCR).
+- **Header con Hover Forgiving (Debounced):** Dropdowns con puente de interacción continuo, zona de tolerancia y apertura fluida sin cierres accidentales.
+- **Tipografías Oficiales:** Inter (lectura y UI) y Roboto (cuerpo y datos técnicos).
+- **Paleta de Color UNA:** Rojo UNA (`#C30011`), Azul Marino Institucional (`#283044`) y acentos en ámbar y esmeralda.
