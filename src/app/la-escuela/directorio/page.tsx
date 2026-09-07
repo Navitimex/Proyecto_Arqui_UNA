@@ -19,7 +19,7 @@ export default function DirectorioPage() {
       description="Canales oficiales de atención y contacto con las autoridades, coordinación de cátedras y personal administrativo de la Escuela de Informática."
       icon={<Users className="w-3.5 h-3.5" />}
       quickLinks={[
-        { label: "Mesa de Ayuda Técnica", href: "/servicios-tic#soporte-tecnico" },
+        { label: "Mesa de Ayuda (DTIC)", href: "https://www.dtic.una.ac.cr", external: true },
         { label: "Práctica Profesional (PPS)", href: "/pps" },
       ]}
     >

@@ -25,6 +25,12 @@ import {
   Wifi,
   BookOpen,
   FileCheck2,
+  Library,
+  Building2,
+  Clock,
+  Award,
+  FileText,
+  Globe,
 } from "lucide-react";
 import {
   SITEMAP_NAVIGATION,
@@ -144,20 +150,35 @@ export const Header: React.FC<HeaderProps> = ({ onOpenMobileMenu }) => {
     (cat) => cat.id === activePillar
   );
 
-  // Helper icons for TIC services (uniform styling)
+  // Helper icons for TIC services & institutional platforms (uniform styling)
   const getTicIcon = (title: string) => {
-    const iconClass = "w-4 h-4 text-slate-600";
-    if (title.toLowerCase().includes("contraseña"))
+    const t = title.toLowerCase();
+    const iconClass = "w-4 h-4 text-slate-600 group-hover:text-una-red transition-colors";
+    if (t.includes("contraseña") || t.includes("clave"))
       return <KeyRound className={iconClass} />;
-    if (title.toLowerCase().includes("ayuda") || title.toLowerCase().includes("soporte"))
+    if (t.includes("ayuda") || t.includes("soporte"))
       return <LifeBuoy className={iconClass} />;
-    if (title.toLowerCase().includes("aula"))
+    if (t.includes("aula"))
       return <BookOpen className={iconClass} />;
-    if (title.toLowerCase().includes("eduroam") || title.toLowerCase().includes("wifi"))
+    if (t.includes("eduroam") || t.includes("wifi"))
       return <Wifi className={iconClass} />;
-    if (title.toLowerCase().includes("sigesa"))
+    if (t.includes("sigesa"))
       return <GraduationCap className={iconClass} />;
-    return <FileCheck2 className={iconClass} />;
+    if (t.includes("sibeuna") || t.includes("beca"))
+      return <Library className={iconClass} />;
+    if (t.includes("agde") || t.includes("document"))
+      return <FileCheck2 className={iconClass} />;
+    if (t.includes("secretari"))
+      return <Building2 className={iconClass} />;
+    if (t.includes("teletrabajo"))
+      return <Laptop className={iconClass} />;
+    if (t.includes("horario"))
+      return <Clock className={iconClass} />;
+    if (t.includes("acreditaci"))
+      return <Award className={iconClass} />;
+    if (t.includes("informe") || t.includes("transparencia"))
+      return <FileText className={iconClass} />;
+    return <Globe className={iconClass} />;
   };
 
   // Detección jerárquica de pilar activo (Wayfinding espacial permanente)
@@ -270,11 +291,11 @@ export const Header: React.FC<HeaderProps> = ({ onOpenMobileMenu }) => {
             <button
               onClick={handlePortalClick}
               className={`inline-flex items-center gap-2 px-4 py-2.5 rounded-xl font-heading font-bold text-xs tracking-wide transition-all shadow-sm ${
-                isPortalOpen || pathname === "/servicios-tic"
+                isPortalOpen
                   ? "bg-una-red text-white shadow-md shadow-red-900/25"
                   : "bg-una-blue hover:bg-slate-800 text-white"
               }`}
-              aria-label="Abrir menú de herramientas y servicios TIC"
+              aria-label="Abrir menú de plataformas institucionales y servicios TIC"
               aria-expanded={isPortalOpen}
               aria-haspopup="true"
             >
@@ -296,11 +317,12 @@ export const Header: React.FC<HeaderProps> = ({ onOpenMobileMenu }) => {
             />
 
             {/* ==========================================
-                DROPDOWN PORTAL TIC (FORMATO UNIFORME Y ESPACIOSO)
+                DROPDOWN PORTAL TIC (FUSIÓN PLATAFORMAS & SERVICIOS TIC)
+                Formato de cuadrícula en 2 columnas, enlaces externos directos
                 ========================================== */}
             {isPortalOpen && (
               <div
-                className="absolute top-full right-0 mt-2 w-96 z-50 animate-in fade-in slide-in-from-top-1 duration-150"
+                className="absolute top-full right-0 mt-2 w-[580px] lg:w-[620px] z-50 animate-in fade-in slide-in-from-top-1 duration-150"
                 onMouseEnter={cancelTimers}
                 onMouseLeave={() => scheduleClose(280)}
               >
@@ -312,57 +334,61 @@ export const Header: React.FC<HeaderProps> = ({ onOpenMobileMenu }) => {
                   <div className="px-3.5 py-2.5 bg-slate-50 rounded-xl border border-slate-100 mb-2.5 flex items-center justify-between">
                     <div>
                       <span className="text-[10px] font-bold uppercase tracking-wider text-slate-500 block">
-                        Servicios Centralizados
+                        Plataformas Institucionales & TIC
                       </span>
                       <span className="font-heading font-bold text-slate-800 text-sm">
-                        Portal de Sistemas & TIC
+                        Portal de Sistemas & Servicios UNA
                       </span>
                     </div>
+                    <span className="text-[10px] font-medium bg-emerald-50 text-emerald-700 px-2.5 py-1 rounded-full border border-emerald-200 flex items-center gap-1.5">
+                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+                      Enlaces Directos Oficiales
+                    </span>
                   </div>
 
-                  {/* Lista de Servicios Directos (Formato uniforme y sin truncamiento brusco) */}
-                  <div className="space-y-1">
+                  {/* Lista de Servicios y Plataformas en Cuadrícula Doble */}
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-1.5 max-h-[440px] overflow-y-auto pr-0.5">
                     {PORTAL_TIC_ITEMS.map((item, idx) => (
-                      <Link
+                      <a
                         key={idx}
                         href={item.href}
-                        target={item.isExternal ? "_blank" : undefined}
-                        rel={item.isExternal ? "noopener noreferrer" : undefined}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         onClick={closeImmediately}
-                        className="p-2.5 rounded-xl flex items-center gap-3 transition-all hover:bg-slate-50 border border-transparent hover:border-slate-100 group"
+                        className="p-2 rounded-xl flex items-start gap-2.5 transition-all hover:bg-slate-50 border border-transparent hover:border-slate-100 group"
                       >
-                        <div className="p-2 rounded-lg shrink-0 bg-slate-100 group-hover:bg-slate-200/70 text-slate-600 transition-colors">
+                        <div className="p-2 rounded-lg shrink-0 bg-slate-100 group-hover:bg-slate-200/70 text-slate-600 transition-colors mt-0.5">
                           {getTicIcon(item.title)}
                         </div>
                         <div className="flex-1 min-w-0">
                           <div className="flex items-center justify-between gap-1">
-                            <span className="text-[13px] font-semibold text-slate-800 group-hover:text-una-red transition-colors">
+                            <span className="text-[12.5px] font-semibold text-slate-800 group-hover:text-una-red transition-colors truncate">
                               {item.title}
                             </span>
-                            {item.isExternal && (
-                              <ExternalLink className="w-3.5 h-3.5 text-slate-400 group-hover:text-una-red shrink-0" />
-                            )}
+                            <ExternalLink className="w-3.5 h-3.5 text-slate-400 group-hover:text-una-red shrink-0" />
                           </div>
                           {item.description && (
-                            <p className="text-[11.5px] text-slate-500 leading-snug mt-0.5">
+                            <p className="text-[11px] text-slate-500 leading-snug mt-0.5 line-clamp-1">
                               {item.description}
                             </p>
                           )}
                         </div>
-                      </Link>
+                      </a>
                     ))}
                   </div>
 
-                  {/* Acceso Completo al Centro TIC */}
+                  {/* Enlace Externo Oficial DTIC */}
                   <div className="pt-2.5 mt-2 border-t border-slate-100">
-                    <Link
-                      href="/servicios-tic"
+                    <a
+                      href="https://www.dtic.una.ac.cr"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       onClick={closeImmediately}
-                      className="w-full py-2.5 px-3 rounded-xl text-xs font-semibold text-center text-slate-700 hover:text-una-red hover:bg-slate-50 flex items-center justify-center gap-1.5 transition-colors border border-slate-100"
+                      className="w-full py-2 px-3 rounded-xl text-xs font-semibold text-center text-slate-700 hover:text-una-red hover:bg-slate-50 flex items-center justify-center gap-1.5 transition-colors border border-slate-100"
                     >
-                      <span>Ir al Centro de Servicios TIC Completo</span>
-                      <ArrowRight className="w-3.5 h-3.5" />
-                    </Link>
+                      <span>Dirección de Tecnologías de Información y Comunicación (DTIC UNA)</span>
+                      <ExternalLink className="w-3.5 h-3.5 text-slate-400" />
+                    </a>
                   </div>
                 </div>
               </div>
@@ -411,11 +437,15 @@ export const Header: React.FC<HeaderProps> = ({ onOpenMobileMenu }) => {
           <div className="max-w-6xl mx-auto px-4 sm:px-6">
             <div className="bg-white rounded-2xl shadow-2xl border border-slate-200/90 overflow-hidden">
               <div
-                className={`p-7 grid gap-8 ${
+                className={`p-7 grid gap-6 xl:gap-8 ${
                   (currentCategory.directItems?.length ? 1 : 0) +
                     (currentCategory.subcategories?.length || 0) ===
                   2
                     ? "grid-cols-2 max-w-3xl mx-auto"
+                    : (currentCategory.directItems?.length ? 1 : 0) +
+                        (currentCategory.subcategories?.length || 0) ===
+                      4
+                    ? "grid-cols-4 max-w-6xl mx-auto"
                     : "grid-cols-3"
                 }`}
               >
@@ -423,7 +453,11 @@ export const Header: React.FC<HeaderProps> = ({ onOpenMobileMenu }) => {
                 {currentCategory.directItems && currentCategory.directItems.length > 0 && (
                   <div>
                     <h4 className="text-xs font-bold uppercase tracking-wider text-slate-500 pb-2 border-b border-slate-100 mb-3">
-                      Enlaces Principales
+                      {currentCategory.id === "oferta-academica"
+                        ? "Carreras de Grado"
+                        : currentCategory.id === "comunidad"
+                        ? "Estudiantil & Egresados"
+                        : "Enlaces Principales"}
                     </h4>
                     <ul className="space-y-1">
                       {currentCategory.directItems.map((item, idx) => (
@@ -463,7 +497,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenMobileMenu }) => {
                               target={subItem.isExternal ? "_blank" : undefined}
                               rel={subItem.isExternal ? "noopener noreferrer" : undefined}
                               onClick={closeImmediately}
-                              className="group flex items-center justify-between py-2 px-3 rounded-lg text-[13.5px] font-medium text-slate-700 hover:text-una-red hover:bg-slate-50 transition-colors"
+                              className="group flex items-center justify-between py-1.5 px-2.5 rounded-lg text-[13px] font-medium text-slate-700 hover:text-una-red hover:bg-slate-50 transition-colors"
                             >
                               <span className="group-hover:translate-x-0.5 transition-transform">
                                 {subItem.title}
