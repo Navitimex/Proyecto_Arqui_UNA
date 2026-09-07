@@ -14,7 +14,7 @@ export default function SobrepasosPage() {
       quickLinks={[
         { label: "Práctica Profesional (PPS)", href: "/pps" },
         { label: "Malla Curricular Bachillerato", href: "/bachillerato" },
-        { label: "Mesa de Ayuda Técnica", href: "/servicios-tic#soporte-tecnico" },
+        { label: "Mesa de Ayuda (DTIC)", href: "https://www.dtic.una.ac.cr", external: true },
       ]}
     >
       <div className="space-y-6 text-xs sm:text-sm text-slate-700 leading-relaxed">

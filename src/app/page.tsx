@@ -26,6 +26,7 @@ import {
   Sparkles,
   BookOpen,
   Laptop,
+  ExternalLink,
 } from "lucide-react";
 
 export default function HomePage() {
@@ -272,8 +273,10 @@ export default function HomePage() {
             </Link>
 
             {/* Tarjeta 4: Portal TIC */}
-            <Link
-              href="/servicios-tic"
+            <a
+              href="https://www.dtic.una.ac.cr"
+              target="_blank"
+              rel="noopener noreferrer"
               className="p-4 rounded-xl border border-slate-200 hover:border-emerald-500 hover:shadow-sm bg-slate-50/60 hover:bg-white transition-all group space-y-2"
             >
               <div className="w-9 h-9 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center group-hover:scale-110 transition-transform">
@@ -282,13 +285,13 @@ export default function HomePage() {
               <div>
                 <h3 className="font-heading font-bold text-sm text-slate-900 group-hover:text-emerald-600 transition-colors flex items-center justify-between">
                   <span>Soporte y Clave TIC</span>
-                  <ArrowRight className="w-3.5 h-3.5 text-slate-400 group-hover:translate-x-1 group-hover:text-emerald-600 transition-all" />
+                  <ExternalLink className="w-3.5 h-3.5 text-slate-400 group-hover:translate-x-0.5 group-hover:text-emerald-600 transition-all" />
                 </h3>
                 <p className="text-[11.5px] text-slate-500 leading-snug mt-1">
-                  Restablecer clave @una.cr y tickets de laboratorio.
+                  Restablecer clave @una.cr y servicios DTIC oficiales.
                 </p>
               </div>
-            </Link>
+            </a>
           </div>
         </div>
       </section>
@@ -589,7 +592,7 @@ export default function HomePage() {
 
             <div className="p-5 pt-0">
               <Link
-                href="/servicios-tic"
+                href="/investigacion/actividades"
                 className="text-xs font-bold text-una-red hover:underline inline-flex items-center gap-1"
               >
                 <span>Inscripción y detalles</span>
@@ -622,13 +625,16 @@ export default function HomePage() {
           </div>
 
           <div className="flex flex-wrap items-center gap-3 shrink-0">
-            <Link
-              href="/servicios-tic#soporte-tecnico"
+            <a
+              href="https://www.dtic.una.ac.cr"
+              target="_blank"
+              rel="noopener noreferrer"
               className="px-5 py-3 rounded-xl bg-[#8B0000] hover:bg-una-red-dark text-white font-heading font-bold text-xs sm:text-sm flex items-center gap-2 shadow-md transition-all"
             >
               <HelpCircle className="w-4 h-4" />
-              <span>Mesa de Ayuda Virtual</span>
-            </Link>
+              <span>Mesa de Ayuda Virtual (DTIC)</span>
+              <ExternalLink className="w-3.5 h-3.5 text-white/80" />
+            </a>
 
             <Link
               href="https://www.google.com/maps"
