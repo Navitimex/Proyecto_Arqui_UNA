@@ -11,10 +11,18 @@
  * ============================================================================
  */
 
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter, Roboto } from "next/font/google";
 import "./globals.css";
 import { ClientLayout } from "./client-layout";
+import { MicrosoftClarity } from "@/components/MicrosoftClarity";
+import {
+  OPEN_GRAPH_BASE,
+  SITE_DESCRIPTION,
+  SITE_NAME,
+  SITE_URL,
+  TWITTER_BASE,
+} from "@/data/seo";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -30,9 +38,13 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
-  title: "Escuela de Informática UNA (Proyecto Académico) | EIF-511",
-  description:
-    "Prototipo de Arquitectura de Información desarrollado exclusivamente con fines académicos y estudiantiles para el curso EIF-511 de la Universidad Nacional de Costa Rica (UNA). Este sitio no representa un canal institucional oficial.",
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: `${SITE_NAME} | EIF-511`,
+    template: `%s | ${SITE_NAME}`,
+  },
+  description: SITE_DESCRIPTION,
+  applicationName: SITE_NAME,
   keywords: [
     "Proyecto Académico",
     "Fines Estudiantiles",
@@ -42,6 +54,9 @@ export const metadata: Metadata = {
     "Prototipo Educativo",
   ],
   authors: [{ name: "Estudiantes del curso EIF-511 Arquitectura de Información" }],
+  creator: "Estudiantes del curso EIF-511 Arquitectura de Información",
+  category: "education",
+  alternates: { canonical: "/" },
   // Evitar que motores de búsqueda indexen este prototipo como si fuera el sitio oficial de la UNA
   robots: {
     index: false,
@@ -52,13 +67,30 @@ export const metadata: Metadata = {
       follow: false,
     },
   },
+  icons: {
+    icon: "/images/logo-escuela-informatica.png",
+    apple: "/images/logo-escuela-informatica.png",
+  },
+  formatDetection: { telephone: false, email: false, address: false },
   openGraph: {
-    title: "Escuela de Informática UNA (Proyecto Académico)",
+    ...OPEN_GRAPH_BASE,
+    title: SITE_NAME,
     description:
       "Prototipo desarrollado exclusivamente con fines académicos para el curso EIF-511 Arquitectura de Información - UNA.",
-    type: "website",
-    locale: "es_CR",
+    url: "/",
   },
+  twitter: {
+    ...TWITTER_BASE,
+    title: SITE_NAME,
+    description:
+      "Prototipo desarrollado exclusivamente con fines académicos para el curso EIF-511 Arquitectura de Información - UNA.",
+  },
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: "#FAF8FF",
 };
 
 export default function RootLayout({
@@ -70,6 +102,7 @@ export default function RootLayout({
     <html lang="es" className={`${inter.variable} ${roboto.variable}`}>
       <body className="min-h-screen flex flex-col bg-[#FAF8FF] font-sans antialiased text-slate-800">
         <ClientLayout>{children}</ClientLayout>
+        <MicrosoftClarity />
       </body>
     </html>
   );
