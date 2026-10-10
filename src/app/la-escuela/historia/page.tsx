@@ -20,13 +20,13 @@ export default function HistoriaPage() {
       <div className="space-y-6 text-slate-700 text-xs sm:text-sm leading-relaxed">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="space-y-3 p-5 rounded-xl bg-slate-50 border border-slate-200">
-            <h3 className="font-heading font-black text-base text-una-blue">Misión Oficial</h3>
+            <h2 className="font-heading font-black text-base text-una-blue">Misión Oficial</h2>
             <p>
               Formar profesionales humanistas e íntegros en computación e informática, capaces de generar soluciones tecnológicas innovadoras, sostenibles y de alto impacto nacional e internacional a través de la docencia, investigación y extensión social.
             </p>
           </div>
           <div className="space-y-3 p-5 rounded-xl bg-slate-50 border border-slate-200">
-            <h3 className="font-heading font-black text-base text-una-blue">Visión</h3>
+            <h2 className="font-heading font-black text-base text-una-blue">Visión</h2>
             <p>
               Ser la unidad académica referente en América Central por su vanguardia en ciencias de la computación, acreditación de calidad rigurosa, liderazgo ético y vinculación proactiva con el sector productivo y la sociedad.
             </p>
@@ -34,7 +34,7 @@ export default function HistoriaPage() {
         </div>
 
         <div className="space-y-3">
-          <h3 className="font-heading font-black text-base text-una-blue">Hitos Históricos</h3>
+          <h2 className="font-heading font-black text-base text-una-blue">Hitos Históricos</h2>
           <ul className="space-y-2">
             <li className="flex items-start gap-2">
               <CheckCircle2 className="w-4 h-4 text-una-red shrink-0 mt-0.5" />

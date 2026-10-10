@@ -18,9 +18,9 @@ export default function NormasApaPage() {
     >
       <div className="space-y-6 text-xs sm:text-sm text-slate-700 leading-relaxed">
         <div className="p-5 rounded-xl bg-slate-50 border border-slate-200 space-y-3">
-          <h3 className="font-heading font-black text-base text-una-blue">
+          <h2 className="font-heading font-black text-base text-una-blue">
             Descargas de Plantillas Oficiales de la Escuela
-          </h3>
+          </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <div className="p-3 bg-white rounded-lg border border-slate-200 flex items-center justify-between">
               <div>

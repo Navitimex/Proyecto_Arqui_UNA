@@ -18,9 +18,9 @@ export default function LabBasesDatosPage() {
     >
       <div className="space-y-6 text-xs sm:text-sm text-slate-700 leading-relaxed">
         <div className="p-5 rounded-xl bg-slate-50 border border-slate-200 space-y-2">
-          <h3 className="font-heading font-black text-base text-una-blue">
+          <h2 className="font-heading font-black text-base text-una-blue">
             Capacidades Técnicas del Laboratorio
-          </h3>
+          </h2>
           <p>
             El laboratorio cuenta con clusters de servidores dedicados a la investigación en gobernanza de datos, optimización de queries complejas, minería de datos y arquitecturas escalables de Big Data para apoyar proyectos de estudiantes de grado y posgrado.
           </p>

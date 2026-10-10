@@ -23,9 +23,9 @@ export default function ActasPage() {
       ]}
     >
       <div className="space-y-6">
-        <h3 className="font-heading font-black text-base text-una-blue">
+        <h2 className="font-heading font-black text-base text-una-blue">
           Sesiones Recientes del Consejo de Unidad
-        </h3>
+        </h2>
 
         <div className="space-y-3">
           {actas.map((acta, idx) => (

@@ -24,9 +24,9 @@ export default function DirectorioPage() {
       ]}
     >
       <div className="space-y-6">
-        <h3 className="font-heading font-black text-base text-una-blue">
+        <h2 className="font-heading font-black text-base text-una-blue">
           Autoridades y Coordinaciones Principales
-        </h3>
+        </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {staff.map((person, idx) => (

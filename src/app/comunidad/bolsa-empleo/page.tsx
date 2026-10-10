@@ -23,15 +23,15 @@ export default function BolsaEmpleoPage() {
       ]}
     >
       <div className="space-y-6">
-        <h3 className="font-heading font-black text-base text-una-blue">
+        <h2 className="font-heading font-black text-base text-una-blue">
           Oportunidades de Empleo y Pasantías Destacadas
-        </h3>
+        </h2>
 
         <div className="space-y-3">
           {jobs.map((job, idx) => (
             <div key={idx} className="p-4 rounded-xl border border-slate-200 bg-slate-50/60 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
               <div className="space-y-1">
-                <h4 className="font-heading font-bold text-sm text-slate-900">{job.title}</h4>
+                <h3 className="font-heading font-bold text-sm text-slate-900">{job.title}</h3>
                 <div className="flex items-center gap-2 text-xs text-slate-500 flex-wrap">
                   <span className="font-semibold text-slate-700">{job.company}</span>
                   <span>•</span>

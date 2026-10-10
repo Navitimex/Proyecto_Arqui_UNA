@@ -23,9 +23,9 @@ export default function ActividadesDivulgacionPage() {
       ]}
     >
       <div className="space-y-6">
-        <h3 className="font-heading font-black text-base text-una-blue">
+        <h2 className="font-heading font-black text-base text-una-blue">
           Eventos Académicos del Año
-        </h3>
+        </h2>
 
         <div className="space-y-3">
           {events.map((ev, i) => (
@@ -34,7 +34,7 @@ export default function ActividadesDivulgacionPage() {
                 <span className="text-[11px] font-bold text-una-red bg-red-50 px-2 py-0.5 rounded">
                   {ev.date}
                 </span>
-                <h4 className="font-heading font-bold text-sm text-slate-900">{ev.title}</h4>
+                <h3 className="font-heading font-bold text-sm text-slate-900">{ev.title}</h3>
                 <p className="text-xs text-slate-600">{ev.desc}</p>
               </div>
 

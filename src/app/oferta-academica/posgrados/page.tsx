@@ -41,9 +41,9 @@ export default function PosgradosPage() {
       ]}
     >
       <div className="space-y-6">
-        <h3 className="font-heading font-black text-base text-una-blue">
+        <h2 className="font-heading font-black text-base text-una-blue">
           Oferta Oficial de Maestrías
-        </h3>
+        </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
           {masterPrograms.map((prog) => (
@@ -52,9 +52,9 @@ export default function PosgradosPage() {
                 <span className="font-mono text-xs font-black text-una-red bg-red-50 px-2 py-0.5 rounded">
                   {prog.code}
                 </span>
-                <h4 className="font-heading font-bold text-sm text-slate-900 leading-snug">
+                <h3 className="font-heading font-bold text-sm text-slate-900 leading-snug">
                   {prog.name}
-                </h4>
+                </h3>
                 <p className="text-xs text-slate-600 leading-relaxed">
                   {prog.desc}
                 </p>

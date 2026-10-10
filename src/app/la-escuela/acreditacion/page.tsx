@@ -20,9 +20,9 @@ export default function AcreditacionPage() {
         <div className="p-5 rounded-xl bg-emerald-50 border border-emerald-200 flex items-start gap-4">
           <Award className="w-8 h-8 text-emerald-600 shrink-0 mt-1" />
           <div className="space-y-1">
-            <h3 className="font-heading font-black text-sm sm:text-base text-emerald-950">
+            <h2 className="font-heading font-black text-sm sm:text-base text-emerald-950">
               Sello Oficial de Calidad SINAES Vigente (2024 - 2028)
-            </h3>
+            </h2>
             <p className="text-emerald-900 text-xs">
               La carrera de Bachillerato en Ingeniería en Sistemas de Información cumple con los 16 criterios de calidad internacional, pertinencia social y rigor científico fijados por el órgano oficial acreditador de Costa Rica.
             </p>
@@ -30,9 +30,9 @@ export default function AcreditacionPage() {
         </div>
 
         <div className="space-y-3">
-          <h4 className="font-heading font-black text-sm text-una-blue">
+          <h2 className="font-heading font-black text-sm text-una-blue">
             Beneficios para la Persona Graduada
-          </h4>
+          </h2>
           <ul className="space-y-2">
             <li className="flex items-start gap-2">
               <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />

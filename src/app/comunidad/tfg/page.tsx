@@ -18,9 +18,9 @@ export default function TFGPage() {
     >
       <div className="space-y-6 text-xs sm:text-sm text-slate-700 leading-relaxed">
         <div className="p-5 rounded-xl bg-slate-50 border border-slate-200 space-y-2">
-          <h3 className="font-heading font-black text-base text-una-blue">
+          <h2 className="font-heading font-black text-base text-una-blue">
             Modalidades de Graduación en Licenciatura
-          </h3>
+          </h2>
           <p>
             El estudiantado de Licenciatura puede optar por tres modalidades oficiales: <strong>Proyecto de Graduación</strong> (desarrollo tecnológico inédito con cliente real), <strong>Tesis de Grado</strong> (investigación científica pura o aplicada) o <strong>Seminario de Graduación</strong>.
           </p>

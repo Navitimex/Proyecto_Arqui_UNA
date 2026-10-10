@@ -40,16 +40,16 @@ export default function LineasInvestigacionPage() {
       ]}
     >
       <div className="space-y-6">
-        <h3 className="font-heading font-black text-base text-una-blue">
+        <h2 className="font-heading font-black text-base text-una-blue">
           Áreas Temáticas Prioritarias
-        </h3>
+        </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {lineas.map((linea, idx) => (
             <div key={idx} className="p-5 rounded-xl border border-slate-200 bg-slate-50/60 space-y-2">
               <div className="flex items-center gap-3">
                 <div className="p-2 rounded-lg bg-white shadow-sm">{linea.icon}</div>
-                <h4 className="font-heading font-bold text-sm text-slate-900">{linea.title}</h4>
+                <h3 className="font-heading font-bold text-sm text-slate-900">{linea.title}</h3>
               </div>
               <p className="text-xs text-slate-600 leading-relaxed">{linea.desc}</p>
             </div>

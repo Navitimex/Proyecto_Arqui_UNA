@@ -18,18 +18,18 @@ export default function CiscoPage() {
     >
       <div className="space-y-6 text-xs sm:text-sm text-slate-700 leading-relaxed">
         <div className="p-5 rounded-xl bg-slate-50 border border-slate-200 space-y-2">
-          <h3 className="font-heading font-black text-base text-una-blue">
+          <h2 className="font-heading font-black text-base text-una-blue">
             Programas Oficiales de Certificación
-          </h3>
+          </h2>
           <p>
             Los cursos de la Academia CISCO brindan acceso a la plataforma global NetAcad, simuladores de vanguardia Packet Tracer y equipos físicos en rack para la preparación de los exámenes de certificación CCNA y CyberOps Associate.
           </p>
         </div>
 
         <div className="space-y-2">
-          <h4 className="font-heading font-black text-sm text-una-blue">
+          <h2 className="font-heading font-black text-sm text-una-blue">
             Módulos Impartidos
-          </h4>
+          </h2>
           <ul className="space-y-1.5">
             <li className="flex items-center gap-2">
               <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />

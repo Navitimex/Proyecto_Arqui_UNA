@@ -21,7 +21,7 @@ export default function SobrepasosPage() {
         <div className="p-4 rounded-xl bg-amber-50 border border-amber-200 flex items-start gap-3">
           <AlertCircle className="w-5 h-5 text-amber-600 shrink-0 mt-0.5" />
           <div className="space-y-1">
-            <h4 className="font-heading font-bold text-sm text-amber-900">Período de Recepción de Solicitudes</h4>
+            <h2 className="font-heading font-bold text-sm text-amber-900">Período de Recepción de Solicitudes</h2>
             <p className="text-amber-800 text-xs">
               Las solicitudes de sobrepaso se gestionan exclusivamente durante los primeros tres días hábiles de la semana de matrícula ordinaria mediante el sistema oficial de la Escuela.
             </p>
@@ -29,9 +29,9 @@ export default function SobrepasosPage() {
         </div>
 
         <div className="space-y-3">
-          <h3 className="font-heading font-black text-base text-una-blue">
+          <h2 className="font-heading font-black text-base text-una-blue">
             Criterios de Prioridad de Asignación
-          </h3>
+          </h2>
           <ul className="space-y-2">
             <li className="flex items-start gap-2">
               <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />

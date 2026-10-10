@@ -15,22 +15,27 @@ export const SITE_URL =
 export const SITE_DESCRIPTION =
   "Prototipo de Arquitectura de Información desarrollado exclusivamente con fines académicos para el curso EIF-511 de la Universidad Nacional de Costa Rica (UNA). Este sitio no representa un canal institucional oficial.";
 
+// Imagen para compartir en redes (1200×630, con el aviso de proyecto académico), generada por
+// src/app/opengraph-image.tsx. Se referencia a mano porque la imagen por archivo solo se aplica
+// a la portada: las rutas que definen su propio openGraph la pierden.
+export const OG_IMAGE = {
+  url: "/opengraph-image",
+  width: 1200,
+  height: 630,
+  alt: "Escuela de Informática UNA: prototipo académico del curso EIF-511, no es un sitio oficial",
+};
+
 // Next.js reemplaza (no fusiona) openGraph/twitter en rutas hijas, así que estos campos se repiten en cada ruta
 export const OPEN_GRAPH_BASE = {
   siteName: SITE_NAME,
   type: "website",
   locale: "es_CR",
-  images: [
-    {
-      url: "/images/logo-escuela-informatica.png",
-      alt: "Logo de la Escuela de Informática UNA",
-    },
-  ],
+  images: [OG_IMAGE],
 } satisfies Metadata["openGraph"];
 
 export const TWITTER_BASE = {
-  card: "summary",
-  images: ["/images/logo-escuela-informatica.png"],
+  card: "summary_large_image",
+  images: [OG_IMAGE],
 } satisfies Metadata["twitter"];
 
 interface PageSeo {
@@ -39,6 +44,11 @@ interface PageSeo {
 }
 
 export const PAGE_SEO: Record<string, PageSeo> = {
+  "/buscar": {
+    title: "Buscar en el sitio",
+    description:
+      "Motor de búsqueda del portal de la Escuela de Informática: encuentre carreras, trámites, servicios y plataformas institucionales.",
+  },
   "/bachillerato": {
     title: "Bachillerato en Ingeniería en Sistemas de Información",
     description:
@@ -181,25 +191,42 @@ export const PAGE_SEO: Record<string, PageSeo> = {
   },
 };
 
-/** Construye la metadata de una ruta a partir de PAGE_SEO (título, descripción, canonical y Open Graph). */
-export function buildPageMetadata(path: string): Metadata {
-  const seo = PAGE_SEO[path];
-  if (!seo) return {};
+/** Título, descripción, canonical, Open Graph y Twitter de una página. Con path null no hay canonical ni og:url. */
+function pageMetadata({ title, description }: PageSeo, path: string | null): Metadata {
+  const socialTitle = `${title} | ${SITE_NAME}`;
 
   return {
-    title: seo.title,
-    description: seo.description,
+    title,
+    description,
     alternates: { canonical: path },
     openGraph: {
       ...OPEN_GRAPH_BASE,
-      title: `${seo.title} | ${SITE_NAME}`,
-      description: seo.description,
-      url: path,
+      title: socialTitle,
+      description,
+      url: path ?? undefined,
     },
     twitter: {
       ...TWITTER_BASE,
-      title: `${seo.title} | ${SITE_NAME}`,
-      description: seo.description,
+      title: socialTitle,
+      description,
     },
   };
 }
+
+/** Construye la metadata de una ruta a partir de PAGE_SEO (título, descripción, canonical y Open Graph). */
+export function buildPageMetadata(path: string): Metadata {
+  const seo = PAGE_SEO[path];
+  // Sin entrada, la ruta heredaría en silencio el canonical y el og:url de la portada (layout raíz)
+  if (!seo) throw new Error(`Falta la entrada "${path}" en PAGE_SEO (src/data/seo.ts).`);
+  return pageMetadata(seo, path);
+}
+
+// Página 404: sin canonical ni og:url, para que no herede los de la portada
+export const NOT_FOUND_METADATA = pageMetadata(
+  {
+    title: "Página no encontrada",
+    description:
+      "La página solicitada no existe en este prototipo académico de la Escuela de Informática.",
+  },
+  null
+);
