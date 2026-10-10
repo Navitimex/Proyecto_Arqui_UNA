@@ -23,9 +23,9 @@ export default function ProyectosInvestigacionPage() {
       ]}
     >
       <div className="space-y-6">
-        <h3 className="font-heading font-black text-base text-una-blue">
+        <h2 className="font-heading font-black text-base text-una-blue">
           Proyectos Activos Registrados ante la Vicerrectoría
-        </h3>
+        </h2>
 
         <div className="space-y-3">
           {proyectos.map((p, idx) => (
@@ -39,7 +39,7 @@ export default function ProyectosInvestigacionPage() {
                     {p.state}
                   </span>
                 </div>
-                <h4 className="font-heading font-bold text-sm text-slate-900">{p.title}</h4>
+                <h3 className="font-heading font-bold text-sm text-slate-900">{p.title}</h3>
                 <span className="text-xs text-slate-500">Investigador Principal: <strong>{p.lead}</strong></span>
               </div>
             </div>

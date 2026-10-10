@@ -18,18 +18,18 @@ export default function DiplomadoPage() {
     >
       <div className="space-y-6 text-xs sm:text-sm text-slate-700 leading-relaxed">
         <div className="p-5 rounded-xl bg-slate-50 border border-slate-200 space-y-2">
-          <h3 className="font-heading font-black text-base text-una-blue">
+          <h2 className="font-heading font-black text-base text-una-blue">
             Perfil de Competencias del Diplomado
-          </h3>
+          </h2>
           <p>
             El Diplomado en Sistemas de Información acredita habilidades sólidas en programación orientada a objetos, bases de datos relacionales intermedias, estructuras de datos y soporte técnico operativo, permitiendo una rápida inserción laboral temprana como Desarrollador Junior mientras se completa el Bachillerato.
           </p>
         </div>
 
         <div className="space-y-3">
-          <h4 className="font-heading font-black text-sm text-una-blue">
+          <h2 className="font-heading font-black text-sm text-una-blue">
             Requisitos de Obtención
-          </h4>
+          </h2>
           <ul className="space-y-2">
             <li className="flex items-start gap-2">
               <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />

@@ -74,6 +74,14 @@ npm run start
 
 ---
 
+## 🔎 Motor de Búsqueda (Azure AI Search)
+
+El sitio incluye un buscador global: botón de lupa en el header (o **Ctrl+K**) con resultados en vivo, y la página `/buscar?q=...` con todos los resultados agrupados por pilar. Las consultas pasan por `/api/search`, que usa **Azure AI Search** cuando está configurado y, si no, un buscador local con el mismo contenido.
+
+Configuración paso a paso (crear el servicio gratis, cargar el índice y publicar en Vercel): **[docs/BUSCADOR_AZURE.md](docs/BUSCADOR_AZURE.md)**.
+
+---
+
 ## 🎯 Validación de Tareas de Card Sorting
 
 El prototipo cuenta con la totalidad de páginas evaluadas en el **Card Sorting Cerrado (OptimalSort)** del proyecto:

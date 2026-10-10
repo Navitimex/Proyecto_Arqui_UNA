@@ -2,8 +2,10 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import { X, ChevronDown, Laptop, ArrowRight, Shield, ExternalLink } from "lucide-react";
+import { useRouter } from "next/navigation";
+import { X, ChevronDown, Laptop, ArrowRight, Shield, ExternalLink, Search } from "lucide-react";
 import { SITEMAP_NAVIGATION, PORTAL_TIC_ITEMS } from "@/data/navigation";
+import { MIN_QUERY_LENGTH } from "@/lib/search/types";
 
 interface MobileDrawerProps {
   isOpen: boolean;
@@ -14,6 +16,17 @@ export const MobileDrawer: React.FC<MobileDrawerProps> = ({ isOpen, onClose }) =
   const [expandedCategory, setExpandedCategory] = useState<string | null>(null);
   const [expandedSubcategory, setExpandedSubcategory] = useState<string | null>(null);
   const [isPortalExpanded, setIsPortalExpanded] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
+  const router = useRouter();
+
+  const handleSearchSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    const q = searchQuery.trim();
+    if (q.length < MIN_QUERY_LENGTH) return;
+    setSearchQuery("");
+    onClose();
+    router.push(`/buscar?q=${encodeURIComponent(q)}`);
+  };
 
   // Close with Escape key
   useEffect(() => {
@@ -83,6 +96,25 @@ export const MobileDrawer: React.FC<MobileDrawerProps> = ({ isOpen, onClose }) =
             <X className="w-5 h-5" />
           </button>
         </div>
+
+        {/* Buscador del sitio (envía a la página de resultados /buscar) */}
+        <form onSubmit={handleSearchSubmit} role="search" className="px-4 py-3 border-b border-slate-200">
+          <label htmlFor="drawer-search" className="sr-only">
+            Buscar en el sitio
+          </label>
+          <div className="relative">
+            <Search className="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2" />
+            <input
+              id="drawer-search"
+              type="search"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              placeholder="Buscar en el sitio..."
+              enterKeyHint="search"
+              className="w-full pl-10 pr-3 py-2.5 rounded-xl bg-slate-50 border border-slate-200 text-sm text-slate-800 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-una-red/30 focus:border-una-red"
+            />
+          </div>
+        </form>
 
         {/* Action Button: Portal TIC (Direct Callout for Mobile con Enlaces Externos) */}
         <div className="p-4 bg-gradient-to-r from-una-blue to-slate-900 text-white border-b border-slate-200">

@@ -18,9 +18,9 @@ export default function IcaiPage() {
     >
       <div className="space-y-6 text-xs sm:text-sm text-slate-700 leading-relaxed">
         <div className="p-5 rounded-xl bg-slate-50 border border-slate-200 space-y-2">
-          <h3 className="font-heading font-black text-base text-una-blue">
+          <h2 className="font-heading font-black text-base text-una-blue">
             Impacto Social y Extensión del ICAI
-          </h3>
+          </h2>
           <p>
             Desde 1996, el ICAI capacita anualmente a miles de personas entre estudiantes de secundaria, profesionales y adultos mayores en competencias ofimáticas, fundamentos de programación, desarrollo web y uso responsable de herramientas de inteligencia artificial.
           </p>

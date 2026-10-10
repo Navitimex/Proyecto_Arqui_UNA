@@ -19,9 +19,9 @@ export default function TramitesDocentesPage() {
     >
       <div className="space-y-6 text-xs sm:text-sm text-slate-700 leading-relaxed">
         <div className="p-5 rounded-xl bg-slate-50 border border-slate-200 space-y-2">
-          <h3 className="font-heading font-black text-base text-una-blue">
+          <h2 className="font-heading font-black text-base text-una-blue">
             Calendario de Entregas y Trámites
-          </h3>
+          </h2>
           <p>
             Los docentes pueden gestionar en esta sección la inclusión de actas digitales, solicitudes de viáticos para giras académicas, reservación anticipada de aulas especializadas y actualización de su currículum oficial en el sistema SIGESA.
           </p>

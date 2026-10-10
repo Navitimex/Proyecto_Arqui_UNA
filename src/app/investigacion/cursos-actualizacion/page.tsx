@@ -24,14 +24,14 @@ export default function CursosActualizacionPage() {
       ]}
     >
       <div className="space-y-6">
-        <h3 className="font-heading font-black text-base text-una-blue">
+        <h2 className="font-heading font-black text-base text-una-blue">
           Convocatorias Abiertas de Matrícula
-        </h3>
+        </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {cursos.map((c, i) => (
             <div key={i} className="p-4 rounded-xl border border-slate-200 bg-slate-50/60 space-y-2">
-              <h4 className="font-heading font-bold text-sm text-slate-900">{c.title}</h4>
+              <h3 className="font-heading font-bold text-sm text-slate-900">{c.title}</h3>
               <div className="flex items-center gap-3 text-xs text-slate-500">
                 <span>{c.hours}</span>
                 <span>•</span>

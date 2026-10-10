@@ -31,6 +31,7 @@ import {
   Award,
   FileText,
   Globe,
+  Search,
 } from "lucide-react";
 import {
   SITEMAP_NAVIGATION,
@@ -40,9 +41,10 @@ import {
 
 interface HeaderProps {
   onOpenMobileMenu: () => void;
+  onOpenSearch: () => void;
 }
 
-export const Header: React.FC<HeaderProps> = ({ onOpenMobileMenu }) => {
+export const Header: React.FC<HeaderProps> = ({ onOpenMobileMenu, onOpenSearch }) => {
   const pathname = usePathname();
   const [activePillar, setActivePillar] = useState<string | null>(null);
   const [isPortalOpen, setIsPortalOpen] = useState(false);
@@ -280,6 +282,19 @@ export const Header: React.FC<HeaderProps> = ({ onOpenMobileMenu }) => {
             })}
           </nav>
 
+          {/* BUSCADOR DEL SITIO (abre el diálogo de búsqueda, también con Ctrl+K) */}
+          <button
+            onClick={() => {
+              closeImmediately();
+              onOpenSearch();
+            }}
+            className="inline-flex items-center justify-center w-10 h-10 rounded-xl text-slate-600 hover:text-una-red hover:bg-slate-100 border border-slate-200 transition-colors"
+            aria-label="Buscar en el sitio (Ctrl+K)"
+            title="Buscar (Ctrl+K)"
+          >
+            <Search className="w-[18px] h-[18px]" />
+          </button>
+
           {/* ==========================================
               BOTÓN DE ACCIÓN FUNCIONAL: PORTAL TIC
               ========================================== */}
@@ -396,15 +411,24 @@ export const Header: React.FC<HeaderProps> = ({ onOpenMobileMenu }) => {
           </div>
         </div>
 
-        {/* BOTÓN HAMBURGUESA (< 1024px) */}
-        <button
-          onClick={onOpenMobileMenu}
-          aria-label="Abrir menú de navegación institucional"
-          className="lg:hidden inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-slate-100 text-una-blue hover:bg-slate-200 hover:text-una-red border border-slate-300 font-heading font-bold text-xs uppercase tracking-wider transition-colors"
-        >
-          <Menu className="w-5 h-5" />
-          <span>Menú</span>
-        </button>
+        {/* BUSCADOR + BOTÓN HAMBURGUESA (< 1024px) */}
+        <div className="lg:hidden flex items-center gap-2">
+          <button
+            onClick={onOpenSearch}
+            aria-label="Buscar en el sitio"
+            className="inline-flex items-center justify-center w-10 h-10 rounded-xl bg-slate-100 text-una-blue hover:bg-slate-200 hover:text-una-red border border-slate-300 transition-colors"
+          >
+            <Search className="w-5 h-5" />
+          </button>
+          <button
+            onClick={onOpenMobileMenu}
+            aria-label="Abrir menú de navegación institucional"
+            className="lg:hidden inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-slate-100 text-una-blue hover:bg-slate-200 hover:text-una-red border border-slate-300 font-heading font-bold text-xs uppercase tracking-wider transition-colors"
+          >
+            <Menu className="w-5 h-5" />
+            <span>Menú</span>
+          </button>
+        </div>
       </div>
 
       {/* =========================================================

@@ -18,9 +18,9 @@ export default function BecasPage() {
     >
       <div className="space-y-6 text-xs sm:text-sm text-slate-700 leading-relaxed">
         <div className="p-5 rounded-xl bg-slate-50 border border-slate-200 space-y-2">
-          <h3 className="font-heading font-black text-base text-una-blue">
+          <h2 className="font-heading font-black text-base text-una-blue">
             Categorías de Becas Disponibles
-          </h3>
+          </h2>
           <p>
             La Universidad Nacional garantiza que ninguna persona con vocación y capacidad académica abandone sus estudios por razones socioeconómicas, ofreciendo becas que cubren aranceles, subsidio mensual de alimentación y residencia estudiantil en Heredia.
           </p>

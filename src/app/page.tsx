@@ -72,15 +72,11 @@ export default function HomePage() {
               </span>
             </div>
 
-            {/* Título Principal */}
-            <div className="space-y-1">
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black font-heading tracking-tight leading-tight text-[#FAF8FF]">
-                Escuela de Informática
-              </h1>
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black font-heading tracking-tight leading-tight text-[#FFAFA3]">
-                Universidad Nacional
-              </h2>
-            </div>
+            {/* Título Principal: un solo h1, la segunda línea es parte del nombre y no un subtítulo */}
+            <h1 className="space-y-1 text-3xl sm:text-4xl lg:text-5xl font-black font-heading tracking-tight leading-tight">
+              <span className="block text-[#FAF8FF]">Escuela de Informática</span>{" "}
+              <span className="block text-[#FFAFA3]">Universidad Nacional</span>
+            </h1>
 
             {/* Descripción */}
             <p className="text-slate-300 text-sm sm:text-[15px] leading-relaxed max-w-2xl font-normal">
@@ -142,9 +138,9 @@ export default function HomePage() {
 
               {/* Contenido Showcase */}
               <div className="p-5 sm:p-6 space-y-2">
-                <h3 className="font-heading font-black text-white text-base sm:text-lg leading-snug">
+                <h2 className="font-heading font-black text-white text-base sm:text-lg leading-snug">
                   {showcaseSlides[showcaseSlide].title}
-                </h3>
+                </h2>
                 <p className="text-slate-300 text-xs sm:text-sm leading-relaxed">
                   {showcaseSlides[showcaseSlide].subtitle}
                 </p>
@@ -614,9 +610,9 @@ export default function HomePage() {
               <span>LUNES A VIERNES • 8:00 AM - 5:00 PM</span>
             </span>
 
-            <h3 className="text-2xl sm:text-3xl font-black font-heading text-una-blue leading-tight">
+            <h2 className="text-2xl sm:text-3xl font-black font-heading text-una-blue leading-tight">
               ¿Dudas con tus trámites académicos o matrícula?
-            </h3>
+            </h2>
 
             <p className="text-slate-600 text-xs sm:text-sm leading-relaxed">
               Nuestro equipo de secretaría académica, orientación vocacional y consejería

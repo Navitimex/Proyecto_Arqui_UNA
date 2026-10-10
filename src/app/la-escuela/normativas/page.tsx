@@ -24,9 +24,9 @@ export default function NormativasPage() {
       ]}
     >
       <div className="space-y-6">
-        <h3 className="font-heading font-black text-base text-una-blue">
+        <h2 className="font-heading font-black text-base text-una-blue">
           Reglamentos Vigentes de Consulta Pública
-        </h3>
+        </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {normativas.map((item, idx) => (
@@ -34,7 +34,7 @@ export default function NormativasPage() {
               <span className="font-mono text-[11px] font-bold text-slate-500 bg-slate-200/70 px-2 py-0.5 rounded">
                 {item.code}
               </span>
-              <h4 className="font-heading font-bold text-sm text-slate-900 leading-snug">{item.title}</h4>
+              <h3 className="font-heading font-bold text-sm text-slate-900 leading-snug">{item.title}</h3>
               <button className="inline-flex items-center gap-1.5 text-xs font-bold text-una-red hover:underline">
                 <Download className="w-3.5 h-3.5" />
                 <span>Descargar Reglamento Oficial</span>

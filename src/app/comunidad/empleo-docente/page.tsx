@@ -18,18 +18,18 @@ export default function EmpleoDocentePage() {
     >
       <div className="space-y-6 text-xs sm:text-sm text-slate-700 leading-relaxed">
         <div className="p-5 rounded-xl bg-slate-50 border border-slate-200 space-y-2">
-          <h3 className="font-heading font-black text-base text-una-blue">
+          <h2 className="font-heading font-black text-base text-una-blue">
             Requisitos Generales para Postulación Docente
-          </h3>
+          </h2>
           <p>
             Los concursos para plazas docentes en la Escuela de Informática se rigen por el Reglamento del Estatuto Orgánico y las disposiciones de la Comisión de Régimen Académico de la UNA.
           </p>
         </div>
 
         <div className="space-y-2">
-          <h4 className="font-heading font-black text-sm text-una-blue">
+          <h2 className="font-heading font-black text-sm text-una-blue">
             Perfil Mínimo Requerido
-          </h4>
+          </h2>
           <ul className="space-y-1.5">
             <li className="flex items-center gap-2">
               <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />

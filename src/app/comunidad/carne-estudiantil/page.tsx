@@ -18,9 +18,9 @@ export default function CarneEstudiantilPage() {
     >
       <div className="space-y-6 text-xs sm:text-sm text-slate-700 leading-relaxed">
         <div className="p-5 rounded-xl bg-slate-50 border border-slate-200 space-y-2">
-          <h3 className="font-heading font-black text-base text-una-blue">
+          <h2 className="font-heading font-black text-base text-una-blue">
             Activación del Carné Digital
-          </h3>
+          </h2>
           <p>
             El carné estudiantil digital se genera directamente a través de la aplicación móvil institucional de la Universidad Nacional o mediante el portal web del Departamento de Registro, cargando una fotografía formal tipo pasaporte con fondo blanco.
           </p>

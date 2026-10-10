@@ -23,9 +23,9 @@ export default function AutoevaluacionPage() {
       ]}
     >
       <div className="space-y-6">
-        <h3 className="font-heading font-black text-base text-una-blue">
+        <h2 className="font-heading font-black text-base text-una-blue">
           Repositorio de Informes Oficiales
-        </h3>
+        </h2>
 
         <div className="space-y-3">
           {reports.map((r, i) => (
@@ -34,7 +34,7 @@ export default function AutoevaluacionPage() {
                 <span className="text-[11px] font-bold text-una-red bg-red-50 px-2 py-0.5 rounded">
                   Período {r.year}
                 </span>
-                <h4 className="font-heading font-bold text-sm text-slate-900">{r.title}</h4>
+                <h3 className="font-heading font-bold text-sm text-slate-900">{r.title}</h3>
                 <span className="text-xs text-slate-500">{r.type} • {r.size}</span>
               </div>
 

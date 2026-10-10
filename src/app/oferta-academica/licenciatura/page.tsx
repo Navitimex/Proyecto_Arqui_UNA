@@ -38,9 +38,9 @@ export default function LicenciaturaPage() {
         </div>
 
         <div className="space-y-3">
-          <h3 className="font-heading font-black text-base text-una-blue">
+          <h2 className="font-heading font-black text-base text-una-blue">
             Ejes Formativos de la Licenciatura
-          </h3>
+          </h2>
           <ul className="space-y-2">
             <li className="flex items-start gap-2">
               <CheckCircle2 className="w-4 h-4 text-una-red shrink-0 mt-0.5" />
