@@ -292,62 +292,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ==========================================
-          2. FRANJA INSTITUCIONAL Y MÉTRICAS CLAVE
-          ========================================== */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6">
-        <div className="bg-white rounded-2xl border border-slate-200/80 shadow-sm p-6 sm:p-8">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 divide-y sm:divide-y-0 sm:divide-x divide-slate-100">
-            <div className="space-y-1 sm:px-4 first:pl-0">
-              <div className="text-3xl sm:text-4xl font-black font-heading text-una-blue tracking-tight">
-                +35
-              </div>
-              <div className="font-heading font-bold text-sm text-slate-800">
-                Años de Liderazgo
-              </div>
-              <p className="text-xs text-slate-500 leading-relaxed">
-                Pioneros en la educación informática y tecnológica de Costa Rica.
-              </p>
-            </div>
-
-            <div className="space-y-1 sm:px-4 pt-4 sm:pt-0">
-              <div className="text-3xl sm:text-4xl font-black font-heading text-una-blue tracking-tight">
-                100%
-              </div>
-              <div className="font-heading font-bold text-sm text-slate-800">
-                Inserción Laboral
-              </div>
-              <p className="text-xs text-slate-500 leading-relaxed">
-                Graduados vinculados al sector tecnológico nacional e internacional.
-              </p>
-            </div>
-
-            <div className="space-y-1 sm:px-4 pt-4 sm:pt-0">
-              <div className="text-3xl sm:text-4xl font-black font-heading text-una-red tracking-tight">
-                SINAES
-              </div>
-              <div className="font-heading font-bold text-sm text-slate-800">
-                Acreditación Oficial
-              </div>
-              <p className="text-xs text-slate-500 leading-relaxed">
-                Estándares de calidad y rigor curricular con validez global.
-              </p>
-            </div>
-
-            <div className="space-y-1 sm:px-4 pt-4 sm:pt-0">
-              <div className="text-3xl sm:text-4xl font-black font-heading text-una-blue tracking-tight">
-                +1,200
-              </div>
-              <div className="font-heading font-bold text-sm text-slate-800">
-                Estudiantes Activos
-              </div>
-              <p className="text-xs text-slate-500 leading-relaxed">
-                Comunidad académica en sede central y campus regionales.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* ==========================================
           3. OFERTA ACADÉMICA Y EJES DE FORMACIÓN (MALLA 2026)
