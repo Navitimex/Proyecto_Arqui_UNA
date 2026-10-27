@@ -29,7 +29,6 @@ import {
   Sparkles,
   Layers,
   Building2,
-  TrendingUp,
   CheckCircle2,
   UserCheck,
   Users,
@@ -702,7 +701,7 @@ export default function BachilleratoPage() {
       {/* 2. FICHA TÉCNICA EJECUTIVA (Cards con margen negativo) */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-10 relative z-20">
         <div className="bg-white rounded-2xl border border-slate-200 shadow-card p-5 sm:p-7">
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-5 divide-y md:divide-y-0 md:divide-x divide-slate-100">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-5 divide-y md:divide-y-0 md:divide-x divide-slate-100">
             <div className="pt-3 first:pt-0 md:pt-0 md:px-3">
               <div className="flex items-center gap-2 text-xs font-semibold text-slate-500 mb-1">
                 <Clock className="w-4 h-4 text-una-red" />
@@ -737,15 +736,6 @@ export default function BachilleratoPage() {
               </div>
               <div className="text-xl font-black font-heading text-una-blue">Presencial / Híbrida</div>
               <span className="text-[11px] text-slate-500">Campus Omar Dengo</span>
-            </div>
-
-            <div className="pt-3 md:pt-0 md:px-3">
-              <div className="flex items-center gap-2 text-xs font-semibold text-slate-500 mb-1">
-                <TrendingUp className="w-4 h-4 text-amber-600" />
-                <span>Empleabilidad</span>
-              </div>
-              <div className="text-xl font-black font-heading text-amber-600">98% Inserción</div>
-              <span className="text-[11px] text-slate-500">Estadística CONARE / OLiP</span>
             </div>
           </div>
         </div>
