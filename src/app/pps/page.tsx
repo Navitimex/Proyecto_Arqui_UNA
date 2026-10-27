@@ -46,14 +46,18 @@ export default function PPSPage() {
       {/* Header Institucional de la Página */}
       <section className="bg-una-blue text-white py-12 px-4 sm:px-6 border-b-4 border-una-red">
         <div className="max-w-7xl mx-auto space-y-4">
-          <nav className="text-xs text-slate-400 flex items-center gap-1.5" aria-label="Miga de pan">
+          <nav className="text-xs text-slate-300 flex items-center gap-2 flex-wrap" aria-label="Miga de pan">
             <Link href="/" className="hover:text-white transition-colors">
               Inicio
             </Link>
-            <span>›</span>
-            <span>Estudiantes y Egresados</span>
-            <span>›</span>
-            <span className="text-white font-semibold">Práctica Profesional Supervisada (PPS)</span>
+            <span className="text-slate-400">&gt;</span>
+            <span className="text-slate-300">Comunidad</span>
+            <span className="text-slate-400">&gt;</span>
+            <span className="text-slate-300">Estudiantes y Egresados</span>
+            <span className="text-slate-400">&gt;</span>
+            <span className="text-white font-semibold underline decoration-una-red decoration-2 underline-offset-4">
+              Práctica Profesional (PPS)
+            </span>
           </nav>
 
           <div className="max-w-3xl space-y-2">
